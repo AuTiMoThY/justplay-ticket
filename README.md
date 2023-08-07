@@ -4,10 +4,15 @@
 ===
 
 - src 資料夾：編譯前檔案，包含sass, pug, script。
+
 - dist 資料夾：給瀏覽器用的（編譯後的）。 **＊請使用這裡的檔案 **
+
 - jQuery 版本：3.3.1
+
 - js位置
+
 -- 全域JS: dist/assets/js/script.js
+
 -- 個別頁面JS: dist/assets/js/*.js (JS檔名對應頁面名稱)
 
 
