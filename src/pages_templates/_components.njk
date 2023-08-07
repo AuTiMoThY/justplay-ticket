@@ -1,0 +1,17 @@
+{% macro pagination(PROJECT_NAME, IMG_PATH) %}
+<nav class="{{PROJECT_NAME}}_pagination">
+    <div class="nav-links">
+        <a class="prev page-numbers" href="javascript:;">
+            <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-arrow.svg"></svg>
+        </a>
+        <a class="page-numbers" href="javascript:;">1</a>
+        <!-- 在當前頁面時，加上class:"current" -->
+        <a class="page-numbers current" href="javascript:;">2</a>
+        <a class="page-numbers" href="javascript:;">3</a>
+        <a class="page-numbers" href="javascript:;">4</a>
+        <a class="next page-numbers" href="javascript:;">
+            <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-arrow.svg"></svg>
+        </a>
+    </div>
+</nav>
+{% endmacro %}

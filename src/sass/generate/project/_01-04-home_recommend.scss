@@ -1,0 +1,29 @@
+.home_recommend {
+    overflow: hidden;
+}
+.home_recommend-hd {
+    .title {
+        @include image_replacement(702, 58);
+        .icon {
+            @include wh(80, 46);
+
+            @include media-down(768) {
+                @include wh(80 - 20, 46 - 20);
+            }
+        }
+    }
+}
+
+.home_recommend-bd {
+    padding-top: 100px;
+
+    .card-swiper {
+
+    }
+}
+
+.home_recommend-more {
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+}

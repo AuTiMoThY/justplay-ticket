@@ -1,0 +1,22 @@
+{% set page_title = "購買須知" %}
+{% set page_class = "page-notice" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+    <!-- =========================================================================-->
+    <!-- 頁面內容  START-->
+    <!-- =========================================================================-->
+    <main class="page_main {{ page_class }}">
+        {% set section_name = "notice_main" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/pages/" + section_name + ".njk" %}
+        </section>
+
+    </main>
+
+    <!-- /.page_main END  !! -->
+    <!-- =========================================================================-->
+    <!-- 頁面內容  END  !!-->
+    <!-- =========================================================================-->
+
+{% endblock %}

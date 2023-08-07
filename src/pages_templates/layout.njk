@@ -1,0 +1,35 @@
+{% import "_components.njk" as components %}
+{% import "_module-card.njk" as card %}
+{% import "_module-field.njk" as field %}
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <title>{% if page_title != '' %}{{page_title}} | {% endif %}就是要玩 - 票卷</title>
+        <?php include 'include/head.php'; ?>
+    </head>
+
+    <body id="app" >
+        <div class="web_goTop" id="goTop">
+            <a class="web_goTop-inner" href="#top" @click="goToTop">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+        <!-- ========================================================================= -->
+        <!-- .body_wrap  START-->
+        <div class="body_wrap">
+            <!-- header START -->
+            <?php include 'include/header.php'; ?>
+            <!-- /header END  !! -->
+            {% block content %}{% endblock %}
+            <!-- footer START -->
+            <?php include 'include/footer.php'; ?>
+            <!-- /footer END  !! -->
+        </div>
+        <!-- /.body_wrap  END  !!-->
+        <!-- =========================================================================-->
+        <?php include 'include/script.php'; ?>
+        {% block page_script %}{% endblock %}
+    </body>
+
+</html>

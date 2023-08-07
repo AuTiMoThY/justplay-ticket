@@ -1,0 +1,22 @@
+{% set page_title = "聯絡我們" %}
+{% set page_class = "page-contact" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+    <!-- =========================================================================-->
+    <!-- 頁面內容  START-->
+    <!-- =========================================================================-->
+    <main class="page_main {{ page_class }}">
+        {% set section_name = "contact_main" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/contact/" + section_name + ".njk" %}
+        </section>
+
+    </main>
+
+    <!-- /.page_main END  !! -->
+    <!-- =========================================================================-->
+    <!-- 頁面內容  END  !!-->
+    <!-- =========================================================================-->
+
+{% endblock %}

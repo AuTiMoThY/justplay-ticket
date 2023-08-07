@@ -1,0 +1,23 @@
+{% set page_title = "會員登入" %}
+{% set page_class = "page-login" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+    <!-- =========================================================================-->
+    <!-- 頁面內容  START-->
+    <!-- =========================================================================-->
+    <div class="special_heading-small"></div>
+    <main class="page_main {{ page_class }}">
+        {% set section_name = "login_main" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/member/" + section_name + ".njk" %}
+        </section>
+
+    </main>
+
+    <!-- /.page_main END  !! -->
+    <!-- =========================================================================-->
+    <!-- 頁面內容  END  !!-->
+    <!-- =========================================================================-->
+
+{% endblock %}

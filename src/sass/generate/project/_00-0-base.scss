@@ -1,0 +1,18 @@
+@mixin image_replacement($image_txt-w, $image_txt-h) {
+    display: flex;
+    width: #{$image_txt-w} * 1px;
+    max-width: 100%;
+    // height: $image_txt-h * 1px; 
+    @include media-down(1200) {
+        width: #{$image_txt-w} * 0.8px;
+    }
+    @include media-down(991) {
+        width: #{$image_txt-w} * 0.6px;
+    }
+    @include media-down(768) {
+        width: #{$image_txt-w} * 0.4px;
+    }
+    .image_replacement {
+        @include rwdBlock($image_txt-w, $image_txt-h);
+    }
+}

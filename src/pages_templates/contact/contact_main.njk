@@ -1,0 +1,117 @@
+<div class="page_section-inner">
+    <div class="page_section-content container">
+        <div class="contact_main-wrapper">
+            <div class="page_section-hd contact_main-hd">
+                <h2 class="title">
+                    <span class="image_replacement text-hide" style="background-image: url({{IMG_PATH}}image_replacement-contact.svg)">
+                        CONTACT
+                    </span>
+                </h2>
+                <div class="subtitle">
+                    <span class="icon">
+                        <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow.svg"></svg>
+                    </span>
+                    <span class="txt">聯絡我們</span>
+                </div>
+            </div>
+            <div class="page_section-bd contact_main-bd pages-wrapper-v">
+                <div class="pages-heading">
+                    <div class="inner">
+                        <div class="contact_main-title">就是要玩  電玩精品、好物專賣店</div>
+                        <ul class="contact_main-info lis-n">
+                            <li class="contact_main-info-item">
+                                <div class="title">營業時間</div>
+                                <div class="txt">週一至週五 10:00~21:00  |  週六至週日 13:00~21:00</div>
+                            </li>
+                            <li class="contact_main-info-item">
+                                <div class="title">客服專線</div>
+                                <div class="txt">02-2967-7461</div>
+                            </li>
+                            <li class="contact_main-info-item">
+                                <div class="title">Follow us</div>
+                                <ul class="social-list lis-n">
+                                    <li class="social-item">
+                                        <a href="javascript:;" class="link" target="_blank">
+                                            <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-facebook.svg"></svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="javascript:;" class="link" target="_blank">
+                                            <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-line.svg"></svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a href="javascript:;" class="link" target="_blank">
+                                            <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-instagram.svg"></svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pages-wrapper-v-pattern"></div>
+                <div class="pages-main">
+                    <div class="inner">
+                        <form class="contact_frm {{PROJECT_NAME}}_frm">
+                            <div class="contact_frm-txt text-center">有任何需要服務之處，歡迎來電或E-mail洽詢<br>也可填寫以下表單，我們會盡快安排專人與您聯繫。</div>
+                            <div class="form-group">
+                                {% set fieldSet = {
+                                field_class: PROJECT_NAME + "_field-v",
+                                name: "u_name",
+                                isRequired: 1,
+                                label: "姓名",
+                                placeholder: "請輸入姓名"}%}
+                                {{ field.input(PROJECT_NAME, fieldSet) }}
+                            </div>
+                            <div class="form-group">
+                                {% set fieldSet = {
+                                field_class: PROJECT_NAME + "_field-v",
+                                name: "u_phone",
+                                isRequired: 1,
+                                label: "電話",
+                                placeholder: "請輸入電話"}%}
+                                {{ field.input(PROJECT_NAME, fieldSet) }}
+                            </div>
+                            <div class="form-group">
+                                {% set fieldSet = {
+                                field_class: PROJECT_NAME + "_field-v",
+                                name: "u_email",
+                                isRequired: 1,
+                                label: "EMAIL",
+                                placeholder: "請輸入EMAIL"}%}
+                                {{ field.input(PROJECT_NAME, fieldSet) }}
+                            </div>
+                            <div class="form-group">
+                                {% set fieldSet = {
+                                field_class: PROJECT_NAME + "_field-v",
+                                name: "u_order",
+                                isRequired: 0,
+                                label: "訂單編號",
+                                placeholder: "請輸入訂單編號"}%}
+                                {{ field.input(PROJECT_NAME, fieldSet) }}
+                            </div>
+                            <div class="form-group">
+                                {% set fieldSet = {
+                                field_class: PROJECT_NAME + "_field-v",
+                                name: "u_msg",
+                                isRequired: 1,
+                                label: "詢問內容",
+                                placeholder: "請輸入詢問內容"}%}
+                                {{ field.textarea(PROJECT_NAME, fieldSet) }}
+                            </div>
+                            <div class="form-btns">
+                                <button type="button" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
+                                    SEND
+                                    <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page_section-inner -->

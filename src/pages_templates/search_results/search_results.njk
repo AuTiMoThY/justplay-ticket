@@ -1,0 +1,94 @@
+<div class="page_section-inner">
+    <div class="page_section-content container">
+        <div class="search_results-wrapper">
+            <div class="page_section-hd search_results-hd">
+                <h2 class="title">
+                    <span class="image_replacement text-hide" style="background-image: url({{IMG_PATH}}image_replacement-search_results.svg)">
+                        search results
+                    </span>
+                </h2>
+                <div class="subtitle">
+                    <span class="icon">
+                        <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow.svg"></svg>
+                    </span>
+                    <span class="txt">搜尋結果</span>
+                </div>
+            </div>
+            <div class="page_section-bd search_results-bd">
+                <div class="search_results-top">
+                    <div class="search_results-banner">
+                        <a href="javascript:;" class="link">
+                            <div class="img_div">
+                                <img src="{{IMG_PATH}}img_ad-2.jpg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="search_results-cate-filter">
+                         <ul class="cate-list lis-n">
+                            {% set cateList = [
+                                { "name": "美食餐券", "url": "javascript:;" },
+                                { "name": "電影票券", "url": "javascript:;" },
+                                { "name": "展覽票券", "url": "javascript:;" },
+                                { "name": "交通票券", "url": "javascript:;" },
+                                { "name": "商品禮券", "url": "javascript:;" },
+                                { "name": "飯店民宿", "url": "javascript:;" }
+                            ] %}
+                            {% for item in cateList %}
+                            <li class="cate-item">
+                                <a href="{{item.url}}" class="link">{{item.name}}</a>
+                            </li>
+                            {% endfor %}
+                         </ul>
+                         <div class="filter-ctrl">
+                            <div class="filter-ctrl-item">
+                                {% set fieldSet = {
+                                    "id": "pdtFilter1",
+                                    "nameArr": "pdtFilter[]",
+                                    "text": "價格低到高"
+                                } %}
+                                {{field.rcx(PROJECT_NAME, fieldSet)}}
+                            </div>
+                            <div class="filter-ctrl-item">
+                                {% set fieldSet = {
+                                    "id": "pdtFilter2",
+                                    "nameArr": "pdtFilter[]",
+                                    "text": "價格高到低"
+                                } %}
+                                {{field.rcx(PROJECT_NAME, fieldSet)}}
+                            </div>
+                            <div class="filter-ctrl-item">
+                                {% set fieldSet = {
+                                    "id": "pdtFilter3",
+                                    "nameArr": "pdtFilter[]",
+                                    "text": "最新上架"
+                                } %}
+                                {{field.rcx(PROJECT_NAME, fieldSet)}}
+                            </div>
+                            <div class="filter-ctrl-item">
+                                {% set fieldSet = {
+                                    "id": "pdtFilter4",
+                                    "nameArr": "pdtFilter[]",
+                                    "text": "熱銷排名"
+                                } %}
+                                {{field.rcx(PROJECT_NAME, fieldSet)}}
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="search_results-main">
+                    <ul class="products-list lis-n">
+                        {% for i in range(0, 12) -%}
+                            <li class="products-item">
+                                <a href="product_detail.php" class="products-item-link">
+                                    {{ card.pdtCard(PROJECT_NAME, IMG_PATH) }}
+                                </a>
+                            </li>
+                        {%- endfor %}
+                    </ul>
+                    {{components.pagination(PROJECT_NAME, IMG_PATH)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page_section-inner -->

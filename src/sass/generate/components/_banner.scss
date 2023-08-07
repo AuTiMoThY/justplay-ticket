@@ -1,0 +1,182 @@
+%ctrlArrow {
+
+	// position: relative;
+	// top: unset;
+	// right: unset;
+	// bottom: unset;
+	// left: unset;
+	margin-top: 0;
+    transform: translateY(-50%);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include circle(40);
+	background-color: rgba(#fff, 0.3);
+	color: color("Pri");
+
+	// box-shadow: 1px 1px 5px rgba(#72705B, 0.3);
+	transition: $transition-base;
+
+    .svgicon {
+        width: 12px;
+        height: 24px;
+    }
+	&:after {
+        display: none;
+	}
+
+	&:hover {
+		z-index: 2;
+        background-color: rgba(#fff, 0.8);
+		box-shadow: 1px 1px 5px rgba(#72705B, 0.8);
+	}
+}
+.banner-swiper {
+	position: relative;
+    width: percentage(1282 / 1920);
+    margin: auto;
+	// overflow: hidden;
+	// &-ctrl {
+	// 	@include absolute(50%, 1rem);
+	// 	transform: translateY(-50%);
+	// 	z-index: 50;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	gap: 24px;
+	// }
+
+	@include media-down(md) {
+		width: 90%;
+	}
+	&-next {
+		@extend %ctrlArrow;
+        right: -40px;
+		@include media-down(md) {
+			right: 0;
+		}
+	}
+	&-prev {
+		@extend %ctrlArrow;
+        left: -40px;
+		@include media-down(md) {
+			left: 0;
+		}
+		.svgicon {
+			transform: scaleX(-1);
+		}
+	}
+
+	.swiper-pagination {
+		position: relative;
+		bottom: unset;
+		left: unset;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+        justify-content: center;
+		gap: 16px;
+		width: auto;
+        
+        @include padding('y', 16px);
+
+		&-bullet {
+			@include circle(8);
+			background-color: color("Pri");
+			opacity: 0.5;
+
+			&.swiper-pagination-bullet-active {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+%bannerRwdBlock {
+	@include rwdBlock(1440, 696);
+
+}
+
+.banner-slide {
+	&-inner {
+		position: relative;
+		display: block;
+		overflow: hidden;
+
+        @include rwdBlock(1282, 585);
+        background-image: url(../images/ticket-bg.png);
+		// @extend %bannerRwdBlock;
+
+		// @include media-down(lg) {
+		// 	height: 100%;
+		// 	padding-bottom: 0;
+		// }
+	}
+
+    &-txt {
+		@include absolute(50%, $L:50%);
+        transform: translate(-50%, -50%);
+		z-index: 40;
+		width: 80%;
+		// max-width: 80%;
+		// padding: 42px 1rem;
+		// background-color: rgba(color('grey6'), 0.85);
+		// border-radius: $border-radius-base;
+        color: #fff;
+        text-align: center;
+
+		@include media-down(md) {
+			// transform: translate(-50%, -50%);
+		}
+
+		.slogan {
+			position: relative;
+			text-transform: capitalize;
+		}
+
+		.subSlogan {
+            // @extend .txt-H2;
+            // font-weight: lighter;
+		}
+
+		.more {
+		}
+	}
+
+
+    &-btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+	&-img {
+		@include absolute(50%, $L:percentage(23 / 1282));
+        transform: translateY(-50%);
+		z-index: 20;
+        // width: 100%;
+		width: percentage(1030 / 1282);
+		// @include media-down($breakpoint-desktop-mobile) {
+		// 	height: 100%;
+		// }
+
+		.img_div {
+			position: relative;
+			z-index: 2;
+			// @extend %bannerRwdBlock;
+            @include rwdBlock(1030, 537);
+            border-radius: 25px;
+
+
+			// @include media-down($breakpoint-desktop-mobile) {
+			// 	height: 100%;
+			// 	padding-bottom: 0;
+			// }
+
+		}
+
+	}
+}
+
+

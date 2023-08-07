@@ -1,0 +1,19 @@
+.products-list:not(.swiper-wrapper) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px ;
+}
+
+
+.products-item:not(.swiper-slide) {
+    flex: 0 0 calc(#{percentage(1 / 4)} - #{calc-gap(24, 4)}px);
+    @include media-down(1440) {
+        flex: 0 0 calc(#{percentage(1 / 3)} - #{calc-gap(24, 3)}px);
+    }
+    @include media-down(1024) {
+        flex: 0 0 calc(#{percentage(1 / 2)} - #{calc-gap(24, 2)}px);
+    }
+    @include media-down(576) {
+        flex: 0 0 calc(#{percentage(1 / 1)} - #{calc-gap(24, 1)}px);
+    }
+}

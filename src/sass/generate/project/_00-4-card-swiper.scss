@@ -1,0 +1,44 @@
+%card-swiper-arrow {
+    @include wh(60);
+    background-color: color("Pri");
+    &:hover {
+        background-color: adjust-color(color("Pri"), $lightness: -3%);
+    }
+}
+
+.card-swiper {
+    position: relative;
+    max-width: percentage(1423 / 1524);
+    margin: auto;
+
+    @include media-down(768) {
+        max-width: 100%;
+    }
+
+    &-prev {
+        @extend %ctrlArrow;
+        @extend %card-swiper-arrow;
+        border-radius: 16px 0 0 16px;
+        left: -76px;
+
+        @include media-down(768) {
+            left: 0;
+        }
+
+        .svgicon {
+            scale: -1;
+        }
+    }
+
+    &-next {
+        @extend %ctrlArrow;
+        @extend %card-swiper-arrow;
+        border-radius: 0 16px 16px 0;
+        right: -76px;
+
+        @include media-down(768) {
+            right: 0;
+        }
+    }
+}
+ 

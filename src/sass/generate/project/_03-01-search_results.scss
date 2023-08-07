@@ -1,0 +1,66 @@
+.search_results-hd {
+    .title {
+        @include image_replacement(1019, 58);
+    }
+}
+
+.search_results-top {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+
+.search_results-banner {
+    .img_div {
+        @include rwdBlock(1524, 603);
+    }
+}
+
+.search_results-cate-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .cate-list {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+
+        .link {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: color("Gray-04");
+            @include txt_setting2(18);
+            &:hover {
+                color: color("Pri");
+            }
+
+            &:after {
+                @include psudoClass;
+                @include triangle(bottom, $size: 8px);
+            }
+        }
+    }
+
+    .filter-ctrl {
+        display: flex;
+        flex-direction: row;
+        // flex-wrap: wrap;
+        gap: 24px;
+    }
+}
+
+
+.search_results-main {
+    padding-top: 120px;
+
+    .#{$PROJECT_NAME}_pagination {
+        padding-top: 120px;
+    }
+}

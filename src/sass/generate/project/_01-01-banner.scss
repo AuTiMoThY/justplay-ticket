@@ -1,0 +1,48 @@
+.banner-swiper {
+
+}
+.home_banner {
+    position: relative;
+    padding-bottom: percentage((305 - 35 - 30 - 40) / 1920);
+    &--bg {
+        @include absolute($B:0, $L:50%);
+        transform: translateX(-50%);
+        // @include wh(100%, 373);
+        @include rwdBlock(1920, 373);
+        background-image: url(../images/pattern-bg.png);
+        opacity: 0.3;
+    }
+    &--wrapper {
+        @include padding('y', 30px);
+        overflow: hidden;
+    }
+
+    .scroller {
+        @include absolute($L:50%);
+        transform: translateX(-50%);
+    }
+
+    #scroller-svg {
+        display: block;
+        @include wh(26, 86);
+
+        @include media-down(md) {
+            @include wh(20, 80);
+        }
+    }
+
+    #mouse-cycle {
+        // animation: mouse_cycle_move 2s ease-in-out;
+        transform-origin: center top;
+    }
+
+    #arrow-1 {
+        animation: scroll_arrow 1s 0s ease-in-out infinite;
+    }
+    #arrow-2 {
+        animation: scroll_arrow 1s 0.3s ease-in-out infinite;
+    }
+    #arrow-3 {
+        animation: scroll_arrow 1s 0.6s ease-in-out infinite;
+    }
+}

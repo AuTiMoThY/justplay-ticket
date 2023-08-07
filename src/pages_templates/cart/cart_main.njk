@@ -1,0 +1,90 @@
+<div class="page_section-inner">
+    <div class="page_section-content container">
+        <div class="cart_main-wrapper">
+            <div class="page_section-bd cart_main-bd pages-wrapper-v">
+                <div class="pages-heading">
+                    <div class="inner">
+                        <h2 class="cart_main-heading-title">
+                            <span class="image_replacement image_replacement-login text-hide" style="background-image: url({{IMG_PATH}}image_replacement-shopping_cart.svg)">
+                                SHOPPING CART
+                            </span>
+                            <div class="txt">購物車</div>
+                        </h2>
+                    </div>
+                </div>
+                <div class="pages-wrapper-v-pattern"></div>
+                <div class="pages-main">
+                    <div class="inner account-wrapper">
+                        <ul class="account-links-list lis-n">
+                            <li class="account-links-item js-active">
+                                <a href="account_memberinfo.php" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">一般購物車(5)</a>
+                            </li>
+                            <li class="account-links-item">
+                                <a href="account_change_pw.php" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">預購購物車(2)</a>
+                            </li>
+                        </ul>
+                        <div class="account-container">
+                            <div class="shopping_list-wrapper">
+                                <div class="shopping_list-heading">
+                                    <h3 class="title">訂購商品列表</h3>
+                                </div>
+                                <div class="shopping_list-table">
+                                    <div class="table_heading">
+                                        <div class="table_cell" data-ref="品名">品名</div>
+                                        <div class="table_cell" data-ref="單價">單價</div>
+                                        <div class="table_cell" data-ref="數量">數量</div>
+                                        <div class="table_cell" data-ref="小記">小記</div>
+                                        <div class="table_cell" data-ref="操作">&nbsp;</div>
+                                    </div>
+                                    {% for i in range(0, 5) %}
+                                        <div class="table_row">
+                                            <div class="table_cell" data-ref="品名">
+                                                <div class="cart_pdt">
+                                                    <div class="pdt_img">
+                                                        <div class="img_div">
+                                                            <img src="{{IMG_PATH}}image-1.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="pdt_name">
+                                                    桃園青埔｜Xpark 都會型水生公園門票
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="table_cell" data-ref="單價">$550</div>
+                                            <div class="table_cell" data-ref="數量">
+                                                <div class="cart_quantity">
+                                                    {% set fieldSet = {
+                                                        "field_class": "quantity_field",
+                                                        "id": "quantity_field-" + i,
+                                                        "name": "quantity-" + i,
+                                                        "isRequired": 0,
+                                                        "label": "數量",
+                                                        "IMG_PATH": IMG_PATH
+                                                    } %}
+                                                    {{field.quantity(PROJECT_NAME, fieldSet)}}
+                                                </div>
+                                            </div>
+                                            <div class="table_cell" data-ref="小記">$550</div>
+                                            <div class="table_cell" data-ref="操作">
+                                                <button type="button" class="del_btn">
+                                                    <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-del.svg"></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="shopping_list-ft">
+                                    <a href="account_shopping_record_list.php" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
+                                BACK
+                                <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page_section-inner -->

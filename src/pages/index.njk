@@ -1,0 +1,37 @@
+{% set page_title = "" %}
+{% set page_class = "page-home" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+    <!-- =========================================================================-->
+    <!-- 頁面內容  START-->
+    <!-- =========================================================================-->
+    <div class="special_heading"></div>
+    <main class="page_main {{ page_class }}">
+        {% set section_name = "home_banner" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/home/" + section_name + ".njk" %}
+        </section>
+
+        {% set section_name = "home_hot" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/home/" + section_name + ".njk" %}
+        </section>
+
+        {% set section_name = "home_ads" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/home/" + section_name + ".njk" %}
+        </section>
+
+        {% set section_name = "home_recommend" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/home/" + section_name + ".njk" %}
+        </section>
+    </main>
+
+    <!-- /.page_main END  !! -->
+    <!-- =========================================================================-->
+    <!-- 頁面內容  END  !!-->
+    <!-- =========================================================================-->
+
+{% endblock %}

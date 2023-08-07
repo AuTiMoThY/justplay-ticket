@@ -1,0 +1,88 @@
+<div class="page_section-inner">
+    <div class="page_section-content container">
+        <div class="account_memberinfo_main-wrapper">
+            <div class="page_section-bd account_memberinfo_main-bd pages-wrapper-v">
+                <div class="pages-heading">
+                    <div class="inner">
+                        <h2 class="account_memberinfo_main-heading-title">
+                            <span class="image_replacement image_replacement-login text-hide" style="background-image: url({{IMG_PATH}}image_replacement-account.svg)">
+                                ACCOUNT
+                            </span>
+                            <div class="txt">會員專區</div>
+                        </h2>
+                    </div>
+                </div>
+                <div class="pages-wrapper-v-pattern"></div>
+                <div class="pages-main">
+                    <div class="inner account-wrapper">
+                        <ul class="account-links-list lis-n">
+                            <li class="account-links-item js-active">
+                                <a href="account_memberinfo.php" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">會員資料修改</a>
+                            </li>
+                            <li class="account-links-item">
+                                <a href="account_change_pw.php" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">會員密碼修改</a>
+                            </li>
+                            <li class="account-links-item">
+                                <a href="account_shopping_record_list.php" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">購物記錄</a>
+                            </li>
+                        </ul>
+                        <div class="account-container">
+                            <!-- action 示意: 會員登入表單送出後，導頁至會員專區頁(account_memberinfo) -->
+                            <form class="memberinfo_frm {{PROJECT_NAME}}_frm" action="account_memberinfo.php" method="POST">
+                                <div class="form-group">
+                                    {% set fieldSet = {
+                                    field_class: PROJECT_NAME + "_field-v",
+                                    name: "email",
+                                    isRequired: 0,
+                                    label: "EMAIL(帳號)",
+                                    placeholder: "example@justplay.com",
+                                    value: "example@justplay.com",
+                                    isDisabled: 1}%}
+                                    {{ field.input(PROJECT_NAME, fieldSet) }}
+                                </div>
+                                <div class="form-group">
+                                    {% set fieldSet = {
+                                    field_class: PROJECT_NAME + "_field-v ",
+                                    id: "",
+                                    name: "name",
+                                    isRequired: 1,
+                                    label: "姓名",
+                                    placeholder: "請輸入姓名"}%}
+                                    {{ field.input(PROJECT_NAME, fieldSet) }}
+                                </div>
+                                <div class="form-group">
+                                    {% set fieldSet = {
+                                    field_class: PROJECT_NAME + "_field-v ",
+                                    id: "",
+                                    name: "phone",
+                                    isRequired: 1,
+                                    label: "電話",
+                                    placeholder: "請輸入電話，EX: 0912-345678 或 02-34567890"}%}
+                                    {{ field.input(PROJECT_NAME, fieldSet) }}
+                                </div>
+                                <div class="form-group">
+                                    {% set fieldSet = {
+                                    field_class: PROJECT_NAME + "_field-v ",
+                                    id: "",
+                                    name: "addr",
+                                    isRequired: 1,
+                                    label: "地址",
+                                    placeholder: "請輸入地址"}%}
+                                    {{ field.input(PROJECT_NAME, fieldSet) }}
+                                </div>
+
+                                <div class="form-btns">
+                                    <button type="submit" id="submitFrm" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
+                                    確認
+                                    <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page_section-inner -->

@@ -1,0 +1,37 @@
+@mixin media-down($breakpoint) {
+    // @debug "#{$breakpoint} : #{is-absolute-length($breakpoint)}";
+    // @debug "#{$breakpoint} : #{is-number($breakpoint)}";
+    @if map-has-key($grid-breakpoints, $breakpoint) {
+        $breakpoint: map-get($grid-breakpoints, $breakpoint);
+        @media (max-width: $breakpoint) { @content; }
+    }
+    @else if is-number($breakpoint) {
+        $breakpoint: $breakpoint * 1px;
+        @media (max-width: $breakpoint) { @content; }
+    }
+    @else {
+
+        @debug "#{$breakpoint} - 打鬼隊出動！！";
+    }
+}
+
+@mixin media-between($breakpoint-min, $breakpoint-max) {
+    @media (min-width: number-to-px($breakpoint-min)) and (max-width: number-to-px($breakpoint-max)) { @content; }
+}
+
+@mixin md-xl {
+    @include media-down(xl) { @content; }
+}
+
+@mixin md-lg {
+    @include media-down(lg) { @content; }
+}
+
+@mixin md-md {
+    @include media-down(md) { @content; }
+}
+
+@mixin md-sm {
+    @include media-down(sm) { @content; }
+}
+

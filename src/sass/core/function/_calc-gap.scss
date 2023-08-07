@@ -1,0 +1,3 @@
+@function calc-gap($gap, $colNum) {
+    @return $gap * ( $colNum - 1 ) / $colNum;
+}

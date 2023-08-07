@@ -1,0 +1,5 @@
+.notice_main-hd {
+    .title {
+        @include image_replacement(405, 58);
+    }
+}

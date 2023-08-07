@@ -1,0 +1,40 @@
+<div class="page_section-inner">
+    <div class="page_section-content container">
+        <div class="home_hot-wrapper">
+            <div class="page_section-hd home_hot-hd">
+                <h2 class="title">
+                    <span class="image_replacement text-hide" style="background-image: url({{IMG_PATH}}image_replacement-hot.svg)">
+                        HOT
+                    </span>
+                    <span class="icon">
+                        <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-hot.svg"></svg>
+                    </span>
+                </h2>
+                <div class="subtitle">
+                    <span class="icon">
+                        <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow.svg"></svg>
+                    </span>
+                    <span class="txt">熱銷商品</span>
+                </div>
+            </div>
+            <div class="page_section-bd home_hot-bd">
+                <ul class="products-list lis-n">
+                    {% for i in range(0, 12) -%}
+                        <li class="products-item">
+                            <a href="product_detail.php" class="products-item-link">
+                                {{ card.pdtCard(PROJECT_NAME, IMG_PATH) }}
+                            </a>
+                        </li>
+                    {%- endfor %}
+                </ul>
+                <div class="home_hot-more">
+                    <a href="product_list.php" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
+                        MORE
+                        <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page_section-inner -->

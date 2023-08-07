@@ -1,0 +1,26 @@
+$base-font-size : 16px;
+
+@import "variable/color";
+@import "variable/font-family";
+@import "variable/layout";
+@import "variable/text";
+@import "variable/shadow";
+@import "variable/easing";
+
+$ratio: 0.75;
+
+$border-radius-base: 4px;
+
+// > transition
+$transition-base: all 0.3s ease-in-out;
+
+
+// > iframe_rwd
+$iframe_rwd-w: 400;
+$iframe_rwd-h: 200;
+
+$input-height-border: 0;
+$input-height: calc(#{$input-height-inner} + #{$input-height-border}) !default;
+$field_border_radius: 4px;
+$field_height: 50;
+$field_bd_color: #D1D1D1;

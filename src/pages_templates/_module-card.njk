@@ -1,0 +1,22 @@
+{% macro pdtCard(PROJECT_NAME, IMG_PATH) %}
+    <module-card class="{{PROJECT_NAME}}_card pdt-card">
+        <div class="{{PROJECT_NAME}}_card-inner">
+            <div class="{{PROJECT_NAME}}_card-hd">
+                <div class="hover_effect">新北｜世界宗教博物館｜門票｜特展．生死晝夜：於死亡中前行</div>
+                <div class="img_div">
+                    <img src="{{IMG_PATH}}image-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="{{PROJECT_NAME}}_card-bd">
+                <div class="title">新北｜世界宗教博物館｜門票｜特展．生死晝夜：於死亡中前行</div>
+            </div>
+            <div class="{{PROJECT_NAME}}_card-ft">
+                <div class="price">$300 - $1,080</div>
+                <hr>
+                <div class="more">
+                    <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-ciircle.svg"></svg>
+                </div>
+            </div>
+        </div>
+    </module-card>
+{% endmacro %}

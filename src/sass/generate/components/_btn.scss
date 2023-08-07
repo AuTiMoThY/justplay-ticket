@@ -1,0 +1,258 @@
+.#{$PROJECT_NAME}_btn {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    // width: 276px;
+    // height: 34px;
+    border-radius: 16px;
+    border: 1px solid color("Pri");
+    background-color: rgba(color('Pri'), 1);
+
+    padding: 8px 32px;
+    // padding: 1rem - (1 * 0.25) 1.8rem - (1 * 0.25);
+
+    box-shadow: 0 0 0 rgba(#000, 0);
+    transition: background-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border 0.3s ease-in-out,
+        text-shadow 0.3s ease-in-out;
+
+    color: #fff;
+    @include txt-("H3");
+
+    cursor: pointer;
+
+    // &-s {
+    //     height: 30px;
+    //     padding: 0.3rem 0.6rem;
+    // }
+
+
+    &:hover,
+    .js-hover & {
+        border: 1px solid rgba(#000, 0);
+        // background-color: color("Main-Blue");
+        color: #fff;
+        text-shadow: 0 0 4px rgba(#fff, 0.8);
+        text-decoration: none;
+        box-shadow: 0px 8px 20px rgba(color('Pri'), 0.5);
+    }
+
+    .svgicon {
+        @include wh(22);
+
+        path {
+            fill: currentColor;
+        }
+
+    }
+
+
+    // .svgicon {
+    //     @include wh(16);
+    //     transform: translateY(0.1ex);
+    //     margin-left: 0.5rem;
+    // }
+
+    &:active {
+        transform: translate(1px, 1px);
+        box-shadow: $boxShadowActive1;
+    }
+
+    @each $name,
+    $color in $colors {
+        &-#{$name} {
+            @include btn_setting(color("#{$name}"), #fff, adjust-color(color("#{$name}"), $lightness: 10%));
+            // color: $color;
+        }
+    }
+
+    @each $name,
+    $color in $colors {
+        &-#{$name} {
+            &.#{$PROJECT_NAME}_btn-nobg {
+                background-color: transparent;
+                color: $color;
+
+                &:hover,
+                .js-hover & {
+                    background-color: lighten($color, 10);
+                    color: #000;
+                }
+            }
+        }
+
+    }
+
+    &-cart {
+        padding: 4px;
+        font-size: 1rem;
+        border-radius: 10px;
+        color: color("Black");
+    }
+
+    &-style1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 64px;
+        border-radius: 32px;
+        border: 1px solid color("Pri");
+        background-color: rgba(color("Pri"), 0);
+        color: color("Black");
+        @include remCalc(font-size, 18);
+        font-weight: normal;
+
+        &:hover {
+            background-color: rgba(color("Pri"), 1);
+            color: color("Black");
+            box-shadow: none;
+        }
+
+        .js-active & {
+            background-color: rgba(color("Pri"), 1);
+            
+        }
+
+        &.small_btn {
+            width: 100px;
+            height: auto;
+            padding: 6px 18px;
+            @include remCalc(font-size, 14);
+        }
+    }
+
+
+    // &-nobg {
+    //     background-color: transparent;
+    //     color: color("Gray-04");
+
+    //     &:hover, .js-hover & {
+    //         // border-color: color("Brown");
+    //         // background-color: color("Brown");
+    //         color: color("Main-Blue");
+
+    //     }
+
+    //     .icon {
+    //         path {
+    //             fill: color('Main-Blue');
+    //         }
+    //     }
+    // }
+
+    // &-nobd {
+    //     border: none;
+    // }
+
+    // &-style1 {
+    //     padding: 8px;
+    //     background-color: transparent;
+    //     border: 1px solid rgba(#000, 0);
+    //     color: color("Main-Blue");
+
+    //     &:hover {
+    //         // border-color: color("Brown");
+    //         // background-color: color("Brown");
+    //         color: color("Main-Blue");
+
+    //     }
+    // }
+
+    // &-reverse {
+    //     // border-color: transparent;
+    //     // background-color: #fff;
+    //     // color: color("Main-Blue");
+    // }
+
+    // &-white {
+    //     border-color: transparent;
+    //     background-color: #fff;
+    //     color: color("Main-Blue");
+    //     box-shadow: 0px 8px 20px rgba(20, 162, 209, 0);
+
+    //     &:hover {
+    //         background-color: #fff;
+    //         color: color("Main-Blue");
+    //         box-shadow: 0px 8px 20px rgba(20, 162, 209, 0.5);
+    //     }
+    // }
+
+    // &-border {
+    //     background-color: rgba(color("Main-Blue"), 0);
+    //     border: 1px solid color("Main-Blue");
+    //     color: color("Main-Blue");
+
+    //     &:hover {
+    //         background-color: rgba(color("Main-Blue"), 1);
+    //         color: #fff;
+    //         text-decoration: none;
+    //     }
+    // }
+
+
+
+    // &-default {
+    // 	@include btn_setting(#3E3A39, #fff);
+    // }
+
+    // &-orange {
+    // 	@include btn_setting(#EB663D, #fff);
+    // }
+
+    // &-blue {
+    // 	@include btn_setting(#1D2974, #fff);
+    // }
+
+    // &-gray {
+    // 	@include btn_setting(#716C6B, #fff);
+    // }
+
+    // &-purple {
+    // 	@include linear-gradient(to bottom right, #c89feb, #5d69be);
+    // 	color: lighten(#5d69be, 40);
+
+    // 	&:hover {
+    // 		@include linear-gradient(to bottom right, darken(#c89feb, 15), darken(#5d69be, 15));
+    // 		color: lighten(#5d69be, 50);
+    // 	}
+    // }
+    // &-green {
+    // 	@include linear-gradient(to bottom right, $green-lighten-1, $green-darken-4);
+    // 	color: $green-lighten-4;
+
+    // 	&:hover {
+    // 		@include linear-gradient(to bottom right, darken($green-lighten-1, 15), darken($green-darken-4, 15));
+    // 		color: $green-lighten-5;
+    // 	}
+    // }
+    // &-red {
+    // 	@include linear-gradient(to bottom right, $red-lighten-1, $red-darken-4);
+    // 	color: $red-lighten-4;
+
+    // 	&:hover {
+    // 		@include linear-gradient(to bottom right, darken($red-lighten-1, 15), darken($red-darken-4, 15));
+    // 		color: $red-lighten-5;
+    // 	}
+    // }
+}
+
+
+.del_btn {
+    border: none;
+    background-color: rgba(color("Gray-02"), 0);
+    border-radius: 8px;
+    padding: 0;
+
+    .svgicon {
+        display: block;
+        @include wh(45);
+    }
+
+    &:hover {
+        background-color: rgba(color("Gray-02"), 1);
+    }
+}

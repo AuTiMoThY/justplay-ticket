@@ -1,0 +1,4 @@
+@mixin txt_setting2($fz) {
+    @include remCalc(font-size, $fz);
+    line-height: 1.5;
+}

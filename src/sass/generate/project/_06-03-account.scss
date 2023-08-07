@@ -1,0 +1,16 @@
+.account-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 71px;
+}
+.account-links {
+    &-list {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+    &-item {
+        flex: 1;
+    }
+}
+

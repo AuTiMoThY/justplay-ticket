@@ -1,0 +1,196 @@
+%commonZindex {
+    position: relative;
+    z-index: 2;
+}
+
+%fieldEffect {
+    @include psudoClass;
+    @include wh;
+    @include absolute(50%, $L: 50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border: 2px solid color("Main");
+    border-radius: $field_border_radius;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.#{$PROJECT_NAME}_field {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    &-v {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    &-label {
+        flex: 0 0 auto;
+        z-index: 3;
+        margin-bottom: 0;
+        min-width: 100px;
+        @include txt-("Body");
+
+        // color: color("Gray-00");
+        &:after {
+            .required & {
+                content: '*';
+                display: inline;
+                margin-left: 0.3rem;
+                color: #FF3434;
+            }
+        }
+    }
+
+    &-ctrler {
+        position: relative;
+        width: 100%;
+        border: 1px solid color("Gray-02");
+        border-radius: 8px;
+
+        .form-control {
+            background-color: transparent;
+        }
+
+        .js-select-focus & {
+            z-index: 99;
+        }
+
+        &::before {
+            @extend %fieldEffect;
+
+            .js-focus &,
+            .js-select-focus & {
+                // z-index: 99;
+                opacity: 1;
+                animation-name: enlarge;
+                animation-duration: 1.5s;
+                animation-fill-mode: both;
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+            }
+        }
+
+        &::after {
+            @extend %fieldEffect;
+
+            .js-focus &,
+            .js-select-focus & {
+
+                // z-index: 99;
+                opacity: 1;
+            }
+        }
+    }
+
+    &.date_field {
+        .icon {
+            @include absolute(50%, 0.5rem);
+            z-index: 10;
+            // @include wh(10, 6);
+            transform: translateY(-50%);
+            color: color("Gray-04");
+        }
+    }
+
+    &.quantity_field {
+        input {
+            border: none;
+            background-color: transparent;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            text-align: center;
+        }
+        .decrement, .increment {
+            flex: 1;
+            padding: 16px;
+            border: none;
+            background-color: transparent;
+            transition: $transition-base;
+            .svgicon {
+                @include wh(20);
+            }
+            &:hover {
+                background-color: color("Gray-01");
+            }
+
+        }
+        .#{$PROJECT_NAME}_field-ctrler {
+            display: flex;
+            border: 1px solid color("Gray-02");
+            border-radius: 8px;
+            overflow: hidden;
+
+        }
+    }
+
+    &.password_field {
+        .#{$PROJECT_NAME}_field-ctrler {
+            display: flex;
+        }
+    }
+
+    &.has-error {
+        .#{$PROJECT_NAME}_field-ctrler {
+            border: 1px solid color("danger");
+
+            .form-control {
+                &::placeholder {
+                    color: color("danger");
+                }
+                &::-webkit-input-placeholder {
+                    /* Chrome/Opera/Safari */
+                    color: color("danger");
+                }
+                
+                &::-moz-placeholder {
+                    /* Firefox 19+ */
+                    color: color("danger");
+                }
+                
+            }
+        }
+    }
+
+    .error-msg {
+        @include remCalc(font-size, 14);
+        color: color("danger");
+        &:empty {
+            display: none;
+        }
+    }
+
+}
+
+
+// .#{$PROJECT_NAME}_field {
+
+
+//     &-prepend {
+//         @extend %commonZindex;
+//     }
+//     &-append {
+//         @extend %commonZindex;
+//         // display: flex;
+//     }
+//     &-input {
+//         @extend %commonZindex;
+//     }
+
+//     &.js-error {
+//         border-color: color("error");
+//     }
+
+//     &.date_field {
+//         .icon {
+//             @include absolute(50%, 0.5rem);
+//             z-index: 10;
+//             // @include wh(10, 6);
+//             transform: translateY(-50%);
+//             color: color("Gray-04");
+//         }
+//     }
+// }

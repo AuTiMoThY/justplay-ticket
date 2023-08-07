@@ -1,0 +1,71 @@
+.contact_main-hd {
+    .title {
+        @include image_replacement(530, 58);
+    }
+}
+
+.contact_main-bd {
+    padding-top: 120px;
+    .pages-heading {
+        background-image: url(../images/contact-hd-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: color("Pri");
+
+        .inner {
+            width: 590px;
+        }
+    }
+
+
+}
+
+.contact_main-title {
+    margin-bottom: 22px;
+    @include remCalc(font-size, 22);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.contact_main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    @include remCalc(font-size, 18);
+    letter-spacing: 1px;
+
+    &-item {
+        display: flex;
+        flex-direction: row;
+        gap: 55px;
+
+        .title {
+            min-width: 90px;
+        }
+
+        .social-list {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+        }
+
+        .social-item {
+            @include circle(40);
+            &:hover {
+                box-shadow: 0 0 10px color("Gray-04");
+            }
+        }
+    }
+}
+
+.contact_frm {
+
+    &-txt {
+        margin-bottom: 80px - 24;
+        @include remCalc(font-size, 22);
+        font-weight: bold;
+    }
+
+
+}

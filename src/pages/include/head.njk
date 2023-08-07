@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+<link rel="shortcut icon" href="{{FAVICON_PATH}}favicon.ico">
+
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<!-- 讓手機不判斷它是電話號碼變顏色-->
+<meta name="format-detection" content="telephone=no">
+{# 
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="57x57" href="{{FAVICON_PATH}}apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{{FAVICON_PATH}}apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{FAVICON_PATH}}apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{FAVICON_PATH}}apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{FAVICON_PATH}}apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{FAVICON_PATH}}apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{FAVICON_PATH}}apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{FAVICON_PATH}}apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{FAVICON_PATH}}apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{FAVICON_PATH}}android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{FAVICON_PATH}}favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="{{FAVICON_PATH}}favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{FAVICON_PATH}}favicon-16x16.png">
+<link rel="manifest" href="{{FAVICON_PATH}}manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{FAVICON_PATH}}ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff"> #}
+
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+{% if PLUGINS.simplebar %}
+<link rel="stylesheet" href="assets/plugins/simplebar/simplebar.css">
+{% endif %}
+{% if PLUGINS.swiper %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+{% endif %}
+{% if PLUGINS.flatpickr %}
+<link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/flatpickr.min.css">
+{% endif %}
+{% if PLUGINS.select2 %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+{% endif %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+<link rel="stylesheet" href="{{CSS_PATH}}style.css?v={{VERSION}}">
+
+<script src="https://unpkg.com/vue@next"></script>

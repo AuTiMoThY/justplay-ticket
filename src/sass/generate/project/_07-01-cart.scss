@@ -1,0 +1,19 @@
+.cart_quantity {
+    
+    .quantity_field {
+        flex-direction: column;
+    }
+
+    .justplayTicket_field-label {
+        display: none;
+    }
+    
+    .justplayTicket_field-ctrler {
+        
+        // width: 105px;
+
+        input {
+            width: 50px;
+        }
+    }
+}

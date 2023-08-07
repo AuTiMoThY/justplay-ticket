@@ -1,0 +1,93 @@
+<div class="page_section-inner">
+    <div class="page_section-content container">
+        <div class="account_shopping_record_detail_main-wrapper">
+            <div class="page_section-bd account_shopping_record_detail_main-bd pages-wrapper-v">
+                <div class="pages-heading">
+                    <div class="inner">
+                        <img src="{{IMG_PATH}}barcode.svg" alt="">
+                    </div>
+                </div>
+                <div class="pages-wrapper-v-pattern"></div>
+                <div class="pages-main">
+                    <div class="inner shopping_base-wrapper">
+                        <div class="shopping_base-heading">
+                            <h3 class="title">訂購資訊</h3>
+                        </div>
+                        <div class="shopping_base-main">
+                            {% set shopping_base_data = [
+                                {
+                                    title: "訂購單號",
+                                    txt: "zxc20230223123"
+                                }, {
+                                    title: "訂購日期",
+                                    txt: "2023.02.23"
+                                }, {
+                                    title: "總金額",
+                                    txt: "$2,750"
+                                }, {
+                                    title: "收件人",
+                                    txt: "收件人名稱"
+                                }, {
+                                    title: "收件人電話",
+                                    txt: "02-2967-7461"
+                                }, {
+                                    title: "收件人地址",
+                                    txt: "新北市板橋區新府路66號2樓"
+                                }, {
+                                    title: "發票類型",
+                                    txt: "三聯式"
+                                }, {
+                                    title: "發票抬頭",
+                                    txt: "彭氏國際企業有限公司"
+                                }, {
+                                    title: "發票統編",
+                                    txt: "69618541"
+                                }, {
+                                    title: "發票寄送地址",
+                                    txt: "新北市板橋區新府路66號2樓"
+                                }
+                            ] %}
+                            {% for item in shopping_base_data %}
+                                <div class="shopping_base-main-row">
+                                    <div class="title">{{item.title}}</div>
+                                    <div class="txt">{{item.txt}}</div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="pages-wrapper-v-pattern"></div>
+                <div class="pages-main">
+                    <div class="inner shopping_list-wrapper">
+                        <div class="shopping_list-heading">
+                            <h3 class="title">訂購商品列表</h3>
+                        </div>
+                        <div class="shopping_list-table">
+                            <div class="table_heading">
+                                <div class="table_cell" data-ref="品名">品名</div>
+                                <div class="table_cell" data-ref="單價">單價</div>
+                                <div class="table_cell" data-ref="數量">數量</div>
+                                <div class="table_cell" data-ref="小記">小記</div>
+                            </div>
+                            {% for i in range(0, 5) %}
+                                <div class="table_row">
+                                    <div class="table_cell" data-ref="品名">桃園青埔｜Xpark 都會型水生公園門票</div>
+                                    <div class="table_cell" data-ref="單價">$550</div>
+                                    <div class="table_cell" data-ref="數量">1</div>
+                                    <div class="table_cell" data-ref="小記">$550</div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="shopping_list-ft">
+                            <a href="account_shopping_record_list.php" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
+                                BACK
+                                <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page_section-inner -->

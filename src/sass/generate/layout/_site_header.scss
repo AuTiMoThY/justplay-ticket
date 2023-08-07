@@ -1,0 +1,128 @@
+.site_header {
+	position: fixed;
+	top: 0;
+	z-index: 350;
+	width: 100%;
+	// padding: 2rem 0;
+	height: $header_h * 1px;
+	// background-color: #fff;
+	// box-shadow: 0 4px 10px rgba(102, 102, 102, 0.1);
+
+	transition: $transition-base;
+	will-change: height;
+	@include media-breakpoint-up(lg) {
+		.js-scrolling & {
+			height: $header_h * 0.8 * 1px;
+		}
+	}
+
+	.js-scrolling & {
+		// @include linear-gradient(to bottom, color("Pri") 50%, rgba(#F6F6F6, 0) 100%);
+		background-color: #fff;
+		box-shadow: 0 10px 30px rgba(darken(color("Pri"), 30), 0.1);
+	}
+
+
+	// .admin-bar & {
+	// 	top: 32px;
+	// }
+
+	@include media-down($breakpoint-desktop-mobile) {
+		height: $header_h-breakpoint-desktop-mobile * 1px;
+	}
+
+	@include media-down(xs) {
+		height: 48px;
+	}
+
+
+	&-container {
+		position: relative;
+		height: 100%;
+
+		// display: flex;
+		// align-items: center;
+		// justify-content: space-between;
+	}
+
+	&-quick {
+		@include absolute(0, $R:12 + 30 + 16);
+		height: 100%;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 24px;
+
+		// @include media-down(1600) {
+		// 	flex-direction: column;
+		// 	justify-content: center;
+		// 	gap: 16px;
+		// }
+
+		@include media-between(1024, 1600) {
+			flex-direction: column;
+			justify-content: center;
+			gap: 16px;
+
+			.js-scrolling & {
+				gap: unset;
+			}
+		}
+
+
+		&-search {
+			width: 180px;
+
+			@include media-down($breakpoint-desktop-mobile) {
+				@include fixed($header_h-breakpoint-desktop-mobile, $R:0);
+				z-index: 1001;
+				width: 70vw;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				// background-color: #ff55ff;
+
+				transform: translateX(100%);
+				transition: $transition-base;
+
+				.js-open-mobile-menu & {
+
+					@include media-down($breakpoint-desktop-mobile) {
+						// box-shadow: -8px 8px 10px rgba(69, 76, 84, 0.1);
+						transform: translateX(0%);
+					}
+				}
+			}
+		}
+
+		&-controls {
+			display: flex;
+			flex-direction: row;
+			gap: 8px;
+
+			.control-link {
+				display: block;
+				@include wh(40);
+				background-color: rgba(color("Gray-02"), 0);
+				border-radius: $border-radius-base;
+
+				&:hover {
+					background-color: rgba(lighten(color("Pri"), 30), 1);
+				}
+			}
+			.control-cart {
+				position: relative;
+				.cart-number {
+					@include absolute(0, 0);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					@include circle(20);
+					background-color: color("danger");
+					color: #fff;
+					@include txt-("Small");
+				}
+			}
+		}
+	}
+}

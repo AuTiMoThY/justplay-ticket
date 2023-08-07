@@ -1,0 +1,25 @@
+// > color
+
+$colors: map-merge(
+    (
+        "Gray-00": #707070,
+        "Gray-01": #FAFAFA,
+        "Gray-02": #D8D8D8,
+        "Gray-03": #BFBFBF,
+        "Gray-04": #959595,
+        "Main-Blue": #14A2D1,
+        "Sub-Yellow": #FFD166,
+        "Sub-Pink": #EF476F,
+        "System-Alert": #F95153,
+        "System-Ok": #2CC57A,
+        "LINE": #00B900,
+        "Main": #FFD100,
+        "Pri": #FFD100,
+        "Sec": #00CBDE,
+        "Sec-02": #ffd166,
+        "Gray-Label": #454B54,
+        "Black": #1A1A1A,
+        "danger": #FF2B2B,
+        "success": #27CE74
+    ),$colors
+);

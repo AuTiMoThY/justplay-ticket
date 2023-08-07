@@ -1,0 +1,35 @@
+p.txt:last-of-type {
+	margin-bottom: 0;
+}
+
+.td-u {
+	text-decoration: underline;
+}
+
+.hide_txt {
+	@include hide_txt;
+}
+
+
+@each $name,
+$color in $colors {
+	.txt-#{$name} {
+		color: $color;
+	}
+}
+
+
+@debug #{map-keys($txt-setting)};
+
+@each $name,
+$setting in $txt-setting {
+
+	.txt-#{$name} {
+		@include txt-(#{$name});
+	}
+
+}
+
+.txtimg {
+    background-repeat: no-repeat;
+}

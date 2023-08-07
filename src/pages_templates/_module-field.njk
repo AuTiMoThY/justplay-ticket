@@ -1,0 +1,114 @@
+{% macro input(PROJECT_NAME, fieldSet, type = 'text') %}
+    {# 
+field_class
+id
+name
+isRequired
+label
+placeholder
+value
+isDisabled
+ #}
+    <module-field id="{% if fieldSet.id != '' %}{{fieldSet.id}}{% endif %}" class="{{PROJECT_NAME}}_field {{fieldSet.field_class}} {% if fieldSet.isRequired %}required{% endif %}">
+        <label for="{{fieldSet.name}}" class="{{PROJECT_NAME}}_field-label">{{fieldSet.label}}</label>
+        <div class="{{PROJECT_NAME}}_field-ctrler">
+            {% if fieldSet.value != '' and fieldSet.isDisabled %}
+            <input type="{{type}}" id="{{fieldSet.name}}" name="{{fieldSet.name}}" v-model="{{fieldSet.name}}" class="form-control" placeholder="{{fieldSet.placeholder}}" value="{{fieldSet.value}}" disabled>
+            {% else %}
+            <input type="{{type}}" id="{{fieldSet.name}}" name="{{fieldSet.name}}" v-model="{{fieldSet.name}}" class="form-control" placeholder="{{fieldSet.placeholder}}">
+            {% endif %}
+        </div>
+    </module-field>
+{% endmacro %}
+
+{% macro password(PROJECT_NAME, fieldSet) %}
+    {# 
+field_class
+id
+name
+isRequired
+label
+placeholder
+ #}
+    <module-field id="{{fieldSet.id}}" class="{{PROJECT_NAME}}_field {{fieldSet.field_class}} {% if fieldSet.isRequired %}required{% endif %}">
+        <label for="{{fieldSet.name}}" class="{{PROJECT_NAME}}_field-label">{{fieldSet.label}}</label>
+        <div class="{{PROJECT_NAME}}_field-ctrler">
+            <input :type="fieldType" id="{{fieldSet.name}}" name="{{fieldSet.name}}" class="form-control" placeholder="{{fieldSet.placeholder}}">
+            <button type="button" class="toggle_password_btn" @click="togglePassword()"><i class="fa-solid fa-eye"></i></button>
+        </div>
+    </module-field>
+{% endmacro %}
+{% macro textarea(PROJECT_NAME, fieldSet) %}
+    {# 
+field_class
+name
+isRequired
+label
+placeholder
+ #}
+    <module-field class="{{PROJECT_NAME}}_field {{fieldSet.field_class}} {% if fieldSet.isRequired %}required{% endif %}">
+        <label for="{{fieldSet.name}}" class="{{PROJECT_NAME}}_field-label">{{fieldSet.label}}</label>
+        <div class="{{PROJECT_NAME}}_field-ctrler">
+            <textarea id="{{fieldSet.name}}" name="{{fieldSet.name}}" v-model="{{fieldSet.name}}" class="form-control" placeholder="{{fieldSet.placeholder}}"></textarea>
+        </div>
+    </module-field>
+{% endmacro %}
+
+{% macro select(PROJECT_NAME, fieldSet) %}
+    {# 
+field_class
+name
+isRequired
+label
+placeholder
+options
+ #}
+    <module-field class="{{PROJECT_NAME}}_field {{fieldSet.field_class}} {% if fieldSet.isRequired %}required{% endif %}">
+        <label for="{{fieldSet.name}}" class="{{PROJECT_NAME}}_field-label">{{fieldSet.label}}</label>
+        <div class="{{PROJECT_NAME}}_field-ctrler">
+            <div class="{{ PROJECT_NAME }}_select form-control">
+                <select name="{{ fieldSet.name }}" id="{{ fieldSet.name }}" v-model="{{ fieldSet.name }}" class="{{ PROJECT_NAME }}_select-select">
+                    <option value="">{{fieldSet.placeholder}}</option>
+                    {% for item in fieldSet.options %}
+                        <option value="{{item}}">{{item}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+    </module-field>
+{% endmacro %}
+
+{% macro quantity(PROJECT_NAME, fieldSet) %}
+    {# 
+field_class
+id
+name
+isRequired
+label
+IMG_PATH
+ #}
+    <module-field id="{{fieldSet.id}}" class="{{PROJECT_NAME}}_field {{fieldSet.field_class}} {% if fieldSet.isRequired %}required{% endif %}">
+        <label for="{{fieldSet.name}}" class="{{PROJECT_NAME}}_field-label">{{fieldSet.label}}</label>
+        <div class="{{PROJECT_NAME}}_field-ctrler">
+            <button class="decrement" @click="decrement">
+                <svg class="svgicon" data-src="{{fieldSet.IMG_PATH}}icons/decrement.svg"></svg>
+            </button>
+            <input type="number" id="{{fieldSet.name}}" v-model="quantity">
+            <button class="increment" @click="increment">
+                <svg class="svgicon" data-src="{{fieldSet.IMG_PATH}}icons/increment.svg"></svg>
+            </button>
+        </div>
+    </module-field>
+{% endmacro %}
+
+{% macro rcx(PROJECT_NAME, fieldSet, type = 'radio') %}
+    <div class="{{ PROJECT_NAME }}_rcx">
+        <label for="{{ fieldSet.id }}" class="{{ PROJECT_NAME }}_rcx-label">
+            <input type="{{ type }}" id="{{ fieldSet.id }}" name="{{ fieldSet.nameArr }}" class="{{ PROJECT_NAME }}_rcx-input" value="{{ fieldSet.text }}">
+            <span class="{{ PROJECT_NAME }}_rcx-label-inner">
+                <span class="choicemark"></span>
+                <span class="txt">{{ fieldSet.text }}</span>
+            </span>
+        </label>
+    </div>
+{% endmacro %}

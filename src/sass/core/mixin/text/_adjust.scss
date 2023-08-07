@@ -1,0 +1,7 @@
+@mixin adjFont($to-size, $font-weight:normal, $lines: auto, $from-size: $base-font-size) {
+	@include adjust-font-size-to($to-size, $lines, $from-size);
+	font-weight: $font-weight;
+}
+@mixin adjFontSize($to-size, $lines: auto, $from-size: $base-font-size) {
+	@include adjust-font-size-to($to-size, $lines, $from-size);
+}

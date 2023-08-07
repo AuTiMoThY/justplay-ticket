@@ -1,0 +1,192 @@
+.shopping_record_list-table {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid color("Pri");
+
+    .table_heading {
+        display: table-row;
+        
+        .table_cell {
+            background-color: color("Pri");
+
+            padding: 12px percentage(48 / 1000);
+        }
+    }
+
+    .table_row {
+        display: table-row;
+        
+        .table_cell {
+            background-color: rgba(color("Pri"), 0);
+            padding: 21px percentage(48 / 1000);
+            &:last-of-type {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            transition: $transition-base;
+        }
+
+        &:hover {
+            .table_cell {
+                background-color: rgba(color("Pri"), 0.1);
+            }
+        }
+    }
+
+    .table_cell {
+        display: table-cell;
+
+        &:first-of-type {
+            border-radius: 8px 0 0 8px;
+        }
+
+        &:last-of-type {
+            border-radius: 0 8px 8px 0;
+        }
+
+        &:last-of-type {
+            width: 120px;
+        }
+    }
+
+    + .#{$PROJECT_NAME}_pagination {
+        padding-top: var(--spacing);
+    }
+}
+
+
+.account_shopping_record_detail_main-bd {
+    .pages-heading {
+        background-image: url(../images/contact-hd-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: color("Pri");
+
+        .inner {
+            width: 590px;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+.shopping_base {
+    &-heading {
+        background-color: color("Pri");
+        border-radius: 8px;
+        margin-bottom: 53px;
+        padding: 12px;
+        .title {
+            margin-bottom: 0;
+            text-align: center;
+            font-weight: normal;
+        }
+    }
+
+    &-main {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &-row {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            .title {
+                flex: 0 0 120px;
+            }
+            .txt {
+                flex: 1;
+                border-bottom: 1px solid color("Pri");
+                padding: 16px 0;
+            }
+        }
+    }
+}
+
+.shopping_list {
+    &-heading {
+        background-color: color("Pri");
+        border-radius: 8px;
+        margin-bottom: 53px;
+        padding: 12px;
+        .title {
+            margin-bottom: 0;
+            text-align: center;
+            font-weight: normal;
+        }
+    }
+
+    &-table {
+        display: table;
+        width: 100%;
+        border-bottom: 1px solid color("Pri");
+
+        .table_heading {
+            display: table-row;
+
+            .table_cell {
+                padding: 12px 0;
+                border-bottom: 1px solid color("Pri");
+                &.table_cell {
+                    border-radius: 0;
+                }
+            }
+        }
+        
+        
+        .table_row {
+            display: table-row;
+
+            .table_cell {
+                background-color: rgba(color("Pri"), 0);
+                padding: 21px 0;
+                &:last-of-type {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                transition: $transition-base;
+            }
+    
+            &:nth-of-type(odd) {
+                .table_cell {
+                    background-color: rgba(color("Pri"), 0.1);
+                }
+            }
+
+            &:hover {
+                .table_cell {
+                    background-color: rgba(color("Pri"), 0.3);
+                }
+            }
+        }
+
+        .table_cell {
+            display: table-cell;
+            vertical-align: middle;
+
+            &:first-of-type {
+                border-radius: 8px 0 0 8px;
+                padding-left: 24px;
+            }
+            
+            &:last-of-type {
+                border-radius: 0 8px 8px 0;
+                padding-right: 24px;
+            }
+        }
+    }
+
+    &-ft {
+        display: flex;
+        justify-content: center;
+        padding-top: var(--spacing);
+    }
+}

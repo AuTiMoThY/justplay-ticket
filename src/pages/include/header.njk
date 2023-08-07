@@ -1,0 +1,91 @@
+{% import "_module-field.njk" as field %}
+<header class="site_header" id="siteHeader">
+    <div class="site_header-container container-fluid">
+        <div class="site_logo">
+            <a href="./" class="site_logo-link">
+                <img src="{{IMG_PATH}}/logo.svg" alt="就是要玩">
+            </a>
+        </div>
+        <nav class="site_nav">
+            <ul class="site_nav-list lis-n">
+                {% set navMenu = [
+                        {
+                            'name': 'menu1',
+                            'title': '吃喝玩樂',
+                            'href': 'product_list.php'
+                        },
+                        {
+                            'name': 'menu2',
+                            'title': '預購票卷',
+                            'href': 'product_list.php'
+                        },
+                        {
+                            'name': 'menu3',
+                            'title': '大宗批發',
+                            'href': 'javascript:;'
+                        },
+                        {
+                            'name': 'menu4',
+                            'title': '異業合作',
+                            'href': 'javascript:;'
+                        },
+                        {
+                            'name': 'menu5',
+                            'title': '票卷回收',
+                            'href': 'javascript:;'
+                        },
+                        {
+                            'name': 'menu6',
+                            'title': '享程旅行社',
+                            'href': 'javascript:;'
+                        }
+
+                ] %}
+                {% for item in navMenu %}
+                    <li class="site_nav-item" data-highlight="{{item.name}}">
+                        <a href="{{item.href}}" class="link">{{item.title}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <div class="site_header-quick">
+            <div class="site_header-quick-search">
+                <div class="site_search">
+                    <form action="search_result.php" class="site_search-frm">
+                        {% set fieldSet = {
+                            field_class: "search_styled",
+                            name: "search",
+                            isRequired: 0,
+                            label: "搜尋",
+                            placeholder: "搜尋"}%}
+                        {{ field.input(PROJECT_NAME, fieldSet) }}
+                        <button type="button" class="site_search-btn">
+                            <svg class="svgicon" id="" data-src="{{IMG_PATH}}icons/icon-search.svg"></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="site_header-quick-controls">
+                <a class="control-link control-login" href="login.php" title="登入">
+                    <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-login.svg"></svg>
+                </a>
+                <a class="control-link control-signup" href="signin.php" title="註冊">
+                    <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-signup.svg"></svg>
+                </a>
+                <a class="control-link control-cart" href="cart.php" title="購物車">
+                    <div class="cart-number">0</div>
+                    <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-cart.svg"></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="m_menu" id="m_menu" @click="toggleMenu">
+        <div class="group">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+        </div>
+    </div>
+</header>
+<!-- /.site_header -->

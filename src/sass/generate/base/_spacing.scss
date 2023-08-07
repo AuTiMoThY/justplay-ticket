@@ -1,0 +1,24 @@
+.spacing-none {
+    @include padding('y', 0);
+}
+
+.spacing-base {
+    @include padding('y', var(--spacing));
+}
+
+.spacing-start {
+    padding-top: var(--spacing);
+    padding-bottom: 20px;
+    // padding-bottom: calc(var(--spacing) / 2); 
+}
+
+.spacing-cnt {
+    @include padding('y', 20px);
+    // @include padding('y', calc(var(--spacing) / 2));
+}
+
+.spacing-end {
+    padding-top: 20px;
+    // padding-top: calc(var(--spacing) / 2);
+    padding-bottom: var(--spacing);
+}

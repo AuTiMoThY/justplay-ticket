@@ -1,0 +1,22 @@
+.home_hot-hd {
+    .title {
+        @include image_replacement(218, 58);
+        .icon {
+            @include wh(53, 80);
+
+            @include media-down(768) {
+                @include wh(33, 60);
+            }
+        }
+    }
+}
+
+.home_hot-bd {
+    padding-top: 100px;
+}
+
+.home_hot-more {
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+}

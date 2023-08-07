@@ -1,0 +1,22 @@
+{% set page_title = "搜尋結果" %}
+{% set page_class = "page-product_list" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+    <!-- =========================================================================-->
+    <!-- 頁面內容  START-->
+    <!-- =========================================================================-->
+    <main class="page_main {{ page_class }}">
+        {% set section_name = "search_results" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/search_results/" + section_name + ".njk" %}
+        </section>
+
+    </main>
+
+    <!-- /.page_main END  !! -->
+    <!-- =========================================================================-->
+    <!-- 頁面內容  END  !!-->
+    <!-- =========================================================================-->
+
+{% endblock %}

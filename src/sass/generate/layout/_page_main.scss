@@ -1,0 +1,15 @@
+.page_main {
+    position: relative;
+    padding-bottom: 200px;
+    &:before {
+        @include psudoClass;
+        @include absolute($B:0);
+        z-index: 0;
+        @include wh(100%, 408);
+        // @include rwdBlock(1921, 408);
+        background-image: url(../images/pattern-footer.png);
+        background-position: center 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

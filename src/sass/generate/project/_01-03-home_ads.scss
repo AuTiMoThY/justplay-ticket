@@ -1,0 +1,16 @@
+.home_ads-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.home_ads-item {
+    .img_div {
+        @include rwdBlock(1920, 760);
+    }
+
+    &:hover {
+        img {
+            scale: 1.05;
+        }
+    }
+}

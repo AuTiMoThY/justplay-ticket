@@ -1,0 +1,59 @@
+<div class="page_section-inner">
+    <div class="page_section-content container">
+        <div class="login_main-wrapper">
+            <div class="page_section-bd login_main-bd pages-wrapper-v">
+                <div class="pages-heading">
+                    <div class="inner">
+                        <h2 class="login_main-heading-title">
+                            <span class="image_replacement image_replacement-login text-hide" style="background-image: url({{IMG_PATH}}image_replacement-login.svg)">
+                                LOG IN
+                            </span>
+                            <div class="txt">會員登入</div>
+                        </h2>
+                    </div>
+                </div>
+                <div class="pages-wrapper-v-pattern"></div>
+                <div class="pages-main">
+                    <div class="inner">
+                        <!-- action 示意: 會員登入表單送出後，導頁至會員專區頁(account_memberinfo) -->
+                        <form class="login_frm {{PROJECT_NAME}}_frm" action="account_memberinfo.php" method="POST">
+                            <div class="form-group">
+                                {% set fieldSet = {
+                                field_class: PROJECT_NAME + "_field-v",
+                                name: "email",
+                                isRequired: 1,
+                                label: "EMAIL(帳號)",
+                                placeholder: "example@justplay.com"}%}
+                                {{ field.input(PROJECT_NAME, fieldSet) }}
+                            </div>
+                            <div class="form-group">
+                                {% set fieldSet = {
+                                field_class: PROJECT_NAME + "_field-v password_field",
+                                id: "password_field",
+                                name: "password",
+                                isRequired: 1,
+                                label: "密碼",
+                                placeholder: "請輸入密碼"}%}
+                                {{ field.password(PROJECT_NAME, fieldSet) }}
+                            </div>
+
+                            <div class="form-btns">
+                                <button type="submit" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
+                                    登入
+                                    <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
+                                </button>
+                            </div>
+                            <div class="form-ft">
+                                <a href="forgot_pw.php" class="link-Black txt-Gray-03 td-u">忘記密碼？</a>
+                                <div class="txt txt-Gray-03">還沒有帳號？<a href="signin.php" class="link-Black txt-Pri td-u">立即登入</a></div>
+                                
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page_section-inner -->

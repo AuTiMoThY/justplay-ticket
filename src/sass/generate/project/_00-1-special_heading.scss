@@ -1,0 +1,20 @@
+.special_heading {
+    @include absolute(0, $L:0);
+    @include rwdBlock(1920, 992);
+    @include linear-gradient(to bottom, color("Pri") 0%, rgba(#F6F6F6, 0) 100%);
+
+    &-small {
+        @include absolute(0, $L:0);
+        @include rwdBlock(1920, 600);
+        @include linear-gradient(to bottom, color("Pri") 0%, rgba(#F6F6F6, 0) 100%);
+
+        &:after {
+            @include psudoClass;
+            @include absolute($header_h);
+            @include rwdBlock(2023, 357);
+            background-image: url(../images/pattern-bg-2.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{% set page_title = "商品列表" %}
+{% set page_class = "page-product_list" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+    <!-- =========================================================================-->
+    <!-- 頁面內容  START-->
+    <!-- =========================================================================-->
+    <main class="page_main {{ page_class }}">
+        {% set section_name = "product_list" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/product/" + section_name + ".njk" %}
+        </section>
+
+        {% set section_name = "product_list__hot" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/product/" + section_name + ".njk" %}
+        </section>
+
+    </main>
+
+    <!-- /.page_main END  !! -->
+    <!-- =========================================================================-->
+    <!-- 頁面內容  END  !!-->
+    <!-- =========================================================================-->
+
+{% endblock %}

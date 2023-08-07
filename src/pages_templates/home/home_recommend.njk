@@ -1,0 +1,78 @@
+<div class="page_section-inner">
+    <div class="page_section-content container">
+        <div class="home_recommend-wrapper">
+            <div class="page_section-hd home_recommend-hd">
+                <h2 class="title">
+                    <span class="image_replacement text-hide" style="background-image: url({{IMG_PATH}}image_replacement-recommend.svg)">
+                        RECOMMEND
+                    </span>
+                    <span class="icon">
+                        <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-recommend.svg"></svg>
+                    </span>
+                </h2>
+                <div class="subtitle">
+                    <span class="icon">
+                        <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow.svg"></svg>
+                    </span>
+                    <span class="txt">推薦商品</span>
+                </div>
+            </div>
+            <div class="page_section-bd home_recommend-bd">
+                <div class="swiper-container card-swiper">
+                    <ul class="products-list lis-n swiper-wrapper">
+                        {% for i in range(0, 6) -%}
+                            <li class="products-item swiper-slide">
+                                <a href="product_detail.php" class="products-item-link">
+                                    {{ card.pdtCard(PROJECT_NAME, IMG_PATH) }}
+                                </a>
+                            </li>
+                        {%- endfor %}
+                    </ul>
+                    <div class="card-swiper-ctrl">
+                        <div class="swiper-button-prev card-swiper-prev">
+                            <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-arrow.svg"></svg>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next card-swiper-next">
+                            <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-arrow.svg"></svg>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var cardSwiper = new Swiper(".card-swiper", {
+                        visibilityFullFit: true,
+                        cssWidthAndHeight: true,
+
+                        loop: true,
+                        centeredSlides: true,
+
+                        autoResize: false,
+
+                        navigation: {
+                            nextEl: ".card-swiper .swiper-button-next",
+                            prevEl: ".card-swiper .swiper-button-prev"
+                        },
+
+                        slidesPerView: 1,
+                        spaceBetween: 48,
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 2
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        }
+                    });
+                </script>
+                <div class="home_recommend-more">
+                    <a href="product_list.php" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
+                        MORE
+                        <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page_section-inner -->

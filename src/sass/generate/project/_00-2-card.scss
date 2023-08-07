@@ -1,0 +1,107 @@
+.#{$PROJECT_NAME}_card {
+    &-hd {
+        position: relative;
+
+        &:after {
+            @include psudoClass;
+            @include absolute(0, 0);
+            @include wh;
+            border: 3px dashed color("Pri");
+            border-radius: 16px;
+        }
+        .img_div {
+            position: relative;
+            z-index: 1;
+            border-radius: 16px;
+            border: 1px solid color("Gray-02");
+            transition: all 0.3s $easeInOutCubic3;
+
+        }
+    }
+
+    &-ft {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+
+        max-width: percentage(333 / 363);
+
+        hr {
+            flex: 1;
+            border: none;
+            height: 0.5px;
+            background-color: color("Gray-00");
+        }
+
+        .swiper-slide & {
+            position: relative;
+            padding-top: 24px + 16;
+            .price {
+                @include absolute(0);
+            }
+        }
+    }
+
+    .hover_effect {
+        @include absolute(50%, $L:50%);
+        z-index: 2;
+        translate: -50% -50%;
+        @include wh;
+        background-color: rgba(color("Black"), 0.8);
+        border: 3px solid color("Pri");
+        border-radius: 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 32px;
+        padding-right: 32px;
+
+        color: color("Pri");
+        @include remCalc(font-size, 20);
+
+        opacity: 0;
+        // scale: 0;
+        transition: all 0.3s $easeInOutCubic3;
+    }
+
+    .title {
+        @include text_ellipsis(2, 1.5);
+    }
+
+    .more {
+        @include circle(32);
+        path {
+            transition: fill 0.3s ease-in-out;
+        }
+    }
+
+    &:hover {
+        .hover_effect {
+            opacity: 1;
+            // scale: 1;
+        }
+
+        .more {
+            path {
+                fill: color("Black");
+            }
+        }
+
+        .swiper-slide & {
+            .#{$PROJECT_NAME}_card-hd {
+                .hover_effect {
+                    translate: calc(-50% - 24px) calc(-50% - 32px);
+                }
+                .img_div {
+                    translate: -24px -32px;
+                }
+
+                // &::after {
+                //     translate: 48px 64px;
+                // }
+            }
+        }
+    }
+
+}

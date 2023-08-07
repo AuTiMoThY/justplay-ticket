@@ -1,0 +1,156 @@
+.page-product_detail {
+    .goback {
+        display: flex;
+        justify-content: center;
+    }
+}
+.product_detail__top {
+    &-hd {
+        .title {
+            @include image_replacement(547, 58);
+        }
+    }
+
+    &-bd {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: percentage(153 / 1524);
+        padding-top: 48px;
+    }
+
+    &-img {
+        flex: 0 0 auto;
+        width: percentage(750 / 1524);
+    }
+    &-info {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+
+        .pdt_btns {
+            width: 100%;
+            display: flex;
+            gap: 32px;
+
+            .#{$PROJECT_NAME}_btn {
+                flex: 1 1 50%;
+            }
+        }
+    }
+}
+
+.pdt_img {
+    .swiper-slide {
+        position: relative;
+
+        &:hover {
+            img {
+                scale: 1.05;
+            }
+        }
+        &-bg {
+            @include rwdBlock(750, 396);
+            background-image: url(../images/ticket-bg-2.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &-img {
+            @include absolute(50%, $L:percentage(69 / 750));
+            translate: 0 -50%;
+            z-index: 1;
+            width: percentage(490 / 750);
+            .img_div {
+                @include rwdBlock(490, 368);
+                border-radius: 16px;
+            }
+        }
+
+
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        border-radius: 8px;
+        color: color("Pri");
+        transition: $transition-base;
+
+        &:hover {
+            background-color: rgba(color("Pri"), 0.3);
+            color: #fff;
+        }
+    }
+}
+
+.pdt_thumb {
+    padding-top: 32px;
+
+    .swiper-slide {
+        cursor: pointer;
+        &:hover {
+            .swiper-slide-img:after {
+                opacity: 1;
+            }
+            img {
+                scale: 1.05;
+            }
+        }
+        &-active {
+            .swiper-slide-img {
+                .img_div {
+
+                }
+            }
+        }
+
+        &-img {
+            position: relative;
+            &:after {
+                @include psudoClass;
+                @include absolute(0, $L:0);
+                @include wh;
+                background-color: rgba(color("Black"), 0.8);
+                border: 3px solid color("Pri");
+                border-radius: 16px;
+                opacity: 0;
+                transition: $transition-base;
+            }
+            .img_div {
+                @include rwdBlock(177, 133);
+                border-radius: 16px;
+                border: 1px solid color("Gray-02");
+            }
+        }
+
+        
+
+
+    }
+}
+
+.pdt_name {
+    @include txt-("H3");
+}
+
+.pdt_price {
+    @include txt-("H3");
+    color: color("danger");
+}
+
+.pdt_summary {
+    padding-top: 24px;
+    border-top: 1px solid color("Pri");
+}
+
+.product_detail__main {
+    background-color: color("Pri");
+
+    &-wrapper {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 130px;
+    }
+}

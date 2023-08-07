@@ -1,0 +1,30 @@
+// $ff = font-family
+// $name
+@mixin txt_setting($ff, $name) {
+	$fz: map-get(map-get($txt-setting, $name), "fz");
+	$lh: map-get(map-get($txt-setting, $name), "lh");
+	$ls: map-get(map-get($txt-setting, $name), "ls");
+	$fw: map-get(map-get($txt-setting, $name), "fw");
+    font-family: $ff;
+	@include remCalc(font-size, $fz);
+	line-height: $lh / $fz;
+	@if is-relative-length($ls) {
+		letter-spacing: $ls;
+	}
+	@else {
+		letter-spacing: $ls * 1px;
+	}
+
+    font-weight: $fw;
+
+	// @include media-down(md) {
+	// 	font-size: map-get(map-get($txt-setting, $name), "fz") * 0.8px;
+	// }
+}
+
+@mixin txt-($name) {
+	@if map-has-key($txt-setting, $name) {
+		@include txt_setting($NotoSansTC, $name);
+    }
+}
+

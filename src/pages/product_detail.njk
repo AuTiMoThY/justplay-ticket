@@ -1,0 +1,34 @@
+{% set page_title = "新北｜世界宗教博物館｜門票｜特展．生死晝夜：於死亡中前行" %}
+{% set page_class = "page-product_detail" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+    <!-- =========================================================================-->
+    <!-- 頁面內容  START-->
+    <!-- =========================================================================-->
+    <main class="page_main {{ page_class }}">
+        {% set section_name = "product_detail__top" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/product/" + section_name + ".njk" %}
+        </section>
+
+        {% set section_name = "product_detail__main" %}
+        <section class="page_section {{section_name}}">
+            {% include "../pages_templates/product/" + section_name + ".njk" %}
+        </section>
+
+        <section class="page_section goback">
+            <a href="javascript:window.history.go(-1);" class="{{PROJECT_NAME}}_btn">
+                BACK
+                <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- /.page_main END  !! -->
+    <!-- =========================================================================-->
+    <!-- 頁面內容  END  !!-->
+    <!-- =========================================================================-->
+
+{% endblock %}

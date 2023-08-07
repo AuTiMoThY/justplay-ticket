@@ -1,0 +1,27 @@
+.signin_main-heading-title {
+    position: relative;
+    @include image_replacement(402, 58);
+}
+
+.login_main-heading-title {
+    position: relative;
+    @include image_replacement(371, 58);
+}
+
+.forgot_pw_main-heading-title {
+    position: relative;
+    @include image_replacement(1158, 58);
+}
+
+.account_memberinfo_main-heading-title,
+.account_change_pw_main-heading-title,
+.account_shopping_record_list_main-heading-title,
+.account_shopping_record_detail_main-heading-title {
+    position: relative;
+    @include image_replacement(551, 58);
+}
+
+.cart_main-heading-title {
+    position: relative;
+    @include image_replacement(934, 58);
+}

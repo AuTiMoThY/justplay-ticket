@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="86" viewBox="0 0 26 86">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_638" data-name="Rectangle 638" width="8" height="14.829" fill="#959595"/>
+    </clipPath>
+  </defs>
+  <g id="scroller" transform="translate(-947 -957)">
+    <g id="arrow" transform="translate(0 -17)">
+      <g id="arrow-1" transform="translate(967.416 1028) rotate(90)">
+        <g id="Group_1269" data-name="Group 1269" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <path id="Path_513" data-name="Path 513" d="M.585,0A.59.59,0,0,1,1,.171L7.829,7a.585.585,0,0,1,0,.827L1,14.657a.585.585,0,1,1-.827-.827L6.587,7.415.171,1A.585.585,0,0,1,.585,0" transform="translate(0 -0.001)" fill="#959595"/>
+        </g>
+      </g>
+      <g id="arrow-2" transform="translate(967.416 1040) rotate(90)">
+        <g id="Group_1269-2" data-name="Group 1269" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <path id="Path_513-2" data-name="Path 513" d="M.585,0A.59.59,0,0,1,1,.171L7.829,7a.585.585,0,0,1,0,.827L1,14.657a.585.585,0,1,1-.827-.827L6.587,7.415.171,1A.585.585,0,0,1,.585,0" transform="translate(0 -0.001)" fill="#959595"/>
+        </g>
+      </g>
+      <g id="arrow-3" transform="translate(967.416 1052) rotate(90)">
+        <g id="Group_1269-3" data-name="Group 1269" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <path id="Path_513-3" data-name="Path 513" d="M.585,0A.59.59,0,0,1,1,.171L7.829,7a.585.585,0,0,1,0,.827L1,14.657a.585.585,0,1,1-.827-.827L6.587,7.415.171,1A.585.585,0,0,1,.585,0" transform="translate(0 -0.001)" fill="#959595"/>
+        </g>
+      </g>
+    </g>
+    <g id="mouse" transform="translate(-47 -37)">
+      <rect id="block" width="26" height="48" rx="13" transform="translate(994 994)" fill="#ffd100"/>
+      <rect id="cycle" width="4" height="16" rx="2" transform="translate(1005 1001)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

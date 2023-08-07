@@ -1,0 +1,24 @@
+a {
+	transition: all 0.3s ease-in-out;
+
+	&:not(.td-u) {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&:hover {
+		color: color("Pri");
+	}
+
+}
+
+
+@each $name,
+$color in $colors {
+	.link-#{$name} {
+		&:hover {
+			color: $color;
+		}
+	}
+}

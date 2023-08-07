@@ -1,0 +1,6 @@
+@function number-to-px($value) {
+    @if is-number($value) {
+        $value: $value * 1px;
+    }
+    @return $value
+}

@@ -1,0 +1,47 @@
+<div class="page_section-inner">
+    <div class="page_section-content container">
+        <div class="forgot_pw_main-wrapper">
+            <div class="page_section-bd forgot_pw_main-bd pages-wrapper-v">
+                <div class="pages-heading">
+                    <div class="inner">
+                        <h2 class="forgot_pw_main-heading-title">
+                            <span class="image_replacement image_replacement-login text-hide" style="background-image: url({{IMG_PATH}}image_replacement-forgot_pw.svg)">
+                                FORGOT PASSWORD
+                            </span>
+                            <div class="txt">忘記密碼</div>
+                        </h2>
+                    </div>
+                </div>
+                <div class="pages-wrapper-v-pattern"></div>
+                <div class="pages-main">
+                    <div class="inner">
+                        <!-- action 示意: 忘記密碼表單送出後，導頁至會員登入頁(login) -->
+                        <form class="forgor_pw_frm {{PROJECT_NAME}}_frm" action="login.php" method="POST">
+                            <div class="form-group">
+                                {% set fieldSet = {
+                                field_class: PROJECT_NAME + "_field-v",
+                                name: "email",
+                                isRequired: 1,
+                                label: "EMAIL(帳號)",
+                                placeholder: "example@justplay.com"}%}
+                                {{ field.input(PROJECT_NAME, fieldSet) }}
+                            </div>
+
+                            <div class="form-btns">
+                                <button type="submit" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
+                                    SEND
+                                    <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
+                                </button>
+                            </div>
+                            <div class="form-ft">
+                                <a href="javascript:window.history.go(-1);" class="link-Black txt-Gray-03 td-u">取消</a>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.page_section-inner -->

@@ -1,0 +1,118 @@
+.pages-wrapper {
+    display: flex;
+    gap: percentage(84 / 1524);
+    padding-top: 48px;
+    .pages-aside {
+        flex: 0 0 234px;
+    
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    
+        &-item {
+            .link {
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                // height: 64px;
+                // border-radius: 32px;
+                // border: 1px solid color("Pri");
+                // background-color: rgba(color("Pri"), 0);
+                // color: color("Black");
+    
+                // &:hover {
+                //     background-color: rgba(color("Pri"), 1);
+                // }
+            }
+    
+            // &.js-active {
+            //     .link {
+            //         background-color: rgba(color("Pri"), 1);
+            //     }
+            // }
+        }
+    }
+    .pages-main {
+        padding: 44px 100px;
+        background-color: #fff;
+        border: 1px solid color("Gray-03");
+        border-radius: 30px;
+    
+        &-title {
+            padding-bottom: 16px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid color("Pri");
+            color: color("Pri");
+        }
+    }
+}
+
+
+.pages-wrapper-v {
+    max-width: percentage(1270 / 1524);
+    margin: auto;
+
+    @include media-down(1280) {
+        max-width: 100%;
+    }
+
+    .pages-heading {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 30px 30px 0 0;
+        min-height: 340px;
+        @include padding("y", 80px);
+
+        background-color: color("Black");
+
+        .inner {
+            max-width: 90%;
+        }
+
+
+        [class*=-heading-title] {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 0;
+            margin: auto;
+        
+            color: #fff;
+            letter-spacing: 1px;
+        }
+    }
+
+    .pages-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid color("Gray-03");
+        border-radius: 0 0 30px 30px;
+        @include padding("y", 120px);
+
+        .inner {
+            width: 750px;
+
+            @include media-down(1280) {
+                width: 90%;
+                margin: auto;
+            }
+        }
+    }
+}
+
+.pages-wrapper-v-pattern {
+    position: relative;
+    &::before {
+        @include absolute(50%);
+        translate: 0 -50%;
+        @include psudoClass;
+        @include rwdBlock(1270, 64);
+        background-image: url(../images/pages-wrapper-v-pattern.svg);
+    }
+}

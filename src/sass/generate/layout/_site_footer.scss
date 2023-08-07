@@ -1,0 +1,107 @@
+.site_footer {
+    position: relative;
+    border-top: 1px solid color("Gray-02");
+    @include padding("y", 70px);
+
+    
+
+    &-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: percentage(90 / 1920);
+
+        @include media-down(1366) {
+            gap: 24px;
+        }
+        @include media-down($breakpoint-desktop-mobile) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+    }
+
+    &-logo {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        flex: 0 0 425px;
+
+
+        @include media-down($breakpoint-desktop-mobile) {
+            flex: 1;
+        }
+
+        @include media-down(sm) {
+            // flex: 0 0 100%;
+        }
+    }
+
+    &-menu {
+        &-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .sublist {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    }
+
+    &-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        flex: 0 1 percentage(363 / 1920);
+        &-cnt {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            .title {
+                margin-bottom: 0;
+                @include remCalc(font-size, 16);
+            }
+
+            &:not(:first-of-type) {
+                border-top: 1px solid color("Gray-03");
+                padding-top: 24px;
+            }
+        }
+    }
+    
+    &--title {
+        @include remCalc(font-size, 18);
+    }
+
+    .link {
+        color: color("Black");
+        @include hover_line(2, color("Black"));
+    }
+
+    .fb-page {
+        @include wh(425, 162);
+    }
+
+    .copyright {
+        padding-top: 24px;
+        color: color("Gray-04");
+        @include remCalc(font-size, 14);
+    }
+}

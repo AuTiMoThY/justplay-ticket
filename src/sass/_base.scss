@@ -1,0 +1,63 @@
+:root {
+    --gap: 24px;
+    --spacing: 104px;
+    @include md-sm {
+        --spacing: calc(104px / 2);
+    }
+}
+
+html {
+
+}
+
+body {
+    font-family: $NotoSansTC;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    // background: linear-gradient(225deg, #216E93 0%, #21648A 26.04%, #1F5881 50%, #172D5B 75%, #191C51 100%);
+
+    color: color("Black");
+    // @include txt-("Btn");
+    // font-size: 20px;
+    opacity: 0;
+    transition: $transition-base;
+
+    &.js-loading-ok {
+        opacity: 1;
+    }
+}
+
+
+
+
+.body_wrap {
+    position: relative;
+    padding-top: $header_h * 1px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @include media-down($breakpoint-desktop-mobile) {
+        padding-top: $header_h-breakpoint-desktop-mobile * 1px;
+    }
+
+    .page_main {
+        flex: 1;
+    }
+
+    .site_footer {
+        flex-shrink: 0;
+    }
+
+}
+
+@import "generate/base/animate_keyframes";
+@import "generate/base/atag";
+@import "generate/base/clearfix";
+@import "generate/base/custom_element";
+@import "generate/base/text";
+@import "generate/base/img";
+@import "generate/base/list";
+@import "generate/base/spacing"; 
+@import "generate/base/icon"; 
+
