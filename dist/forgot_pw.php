@@ -55,9 +55,14 @@
     <module-field id="" class="justplayTicket_field justplayTicket_field-v required">
         <label for="email" class="justplayTicket_field-label">EMAIL(帳號)</label>
         <div class="justplayTicket_field-ctrler">
-            
-            <input type="text" id="email" name="email" v-model="email" class="form-control" placeholder="example@justplay.com">
-            
+            <input type="text"
+                id="email"
+                name="email"
+                v-model="email"
+                class="form-control"
+                placeholder="example@justplay.com"
+                value=""
+                >
         </div>
     </module-field>
 

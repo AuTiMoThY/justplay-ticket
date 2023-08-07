@@ -1,6 +1,6 @@
 const project = "justplayTicket";
 const version = "20230727";
-const codxfolder = "20230727-justplay-ticket";
+const codxfolder = "20230727-justplay-ticket-github";
 
 const entry = 'src';
 const output = 'dist';

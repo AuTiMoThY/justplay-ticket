@@ -26,9 +26,9 @@
     <!-- 頁面內容  START-->
     <!-- =========================================================================-->
     <div class="special_heading-small"></div>
-    <main class="page_main page-cart">
+    <main class="page_main page-cart_pre_order">
         
-        <section class="page_section cart_main">
+        <section class="page_section cart_pre_order_main">
             <div class="page_section-inner">
     <div class="page_section-content container">
         <div class="cart_main-wrapper">
@@ -47,10 +47,10 @@
                 <div class="pages-main">
                     <div class="inner account-wrapper">
                         <ul class="account-links-list lis-n">
-                            <li class="account-links-item js-active">
+                            <li class="account-links-item">
                                 <a href="cart.php" class="link justplayTicket_btn justplayTicket_btn-style1">一般購物車(5)</a>
                             </li>
-                            <li class="account-links-item">
+                            <li class="account-links-item js-active">
                                 <a href="cart-pre-order.php" class="link justplayTicket_btn justplayTicket_btn-style1">預購購物車(2)</a>
                             </li>
                         </ul>

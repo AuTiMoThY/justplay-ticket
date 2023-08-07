@@ -6366,7 +6366,7 @@ img {
 
 .del_btn {
   border: none;
-  background-color: rgba(216, 216, 216, 0);
+  background-color: rgba(250, 250, 250, 0);
   border-radius: 8px;
   padding: 0; }
 
@@ -6376,7 +6376,10 @@ img {
   height: 45px; }
 
 .del_btn:hover {
-  background-color: #d8d8d8; }
+  background-color: #fafafa; }
+
+.del_btn:hover .svgicon path {
+  fill: #FFD100; }
 
 .justplayTicket_rcx {
   display: -webkit-box;
@@ -6386,6 +6389,22 @@ img {
       -ms-flex-align: center;
           align-items: center;
   height: 100%; }
+
+.justplayTicket_rcx-wrap-v {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px; }
+
+.justplayTicket_rcx-wrap-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px; }
 
 .justplayTicket_rcx-label {
   margin-bottom: 0;
@@ -7170,7 +7189,13 @@ input[type="date"], input[type="time"] {
 
 .form-group {
   position: relative;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 24px; }
 
 .justplayTicket_frm {
   display: -webkit-box;
@@ -7248,7 +7273,10 @@ input[type="date"], input[type="time"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 16px; }
+  gap: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .justplayTicket_field-v {
   -webkit-box-orient: vertical;
@@ -7324,9 +7352,9 @@ input[type="date"], input[type="time"] {
   text-align: center; }
 
 .justplayTicket_field.quantity_field .decrement, .justplayTicket_field.quantity_field .increment {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   padding: 16px;
   border: none;
   background-color: transparent;
@@ -7346,7 +7374,8 @@ input[type="date"], input[type="time"] {
   display: flex;
   border: 1px solid #D8D8D8;
   border-radius: 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  width: auto; }
 
 .justplayTicket_field.password_field .justplayTicket_field-ctrler {
   display: -webkit-box;
@@ -8310,7 +8339,7 @@ input[type="date"], input[type="time"] {
   max-width: 83.33333%;
   margin: auto; }
 
-@media (max-width: 1280px) {
+@media (max-width: 1366px) {
   .pages-wrapper-v {
     max-width: 100%; } }
 
@@ -8370,7 +8399,7 @@ input[type="date"], input[type="time"] {
 .pages-wrapper-v .pages-main .inner {
   width: 750px; }
 
-@media (max-width: 1280px) {
+@media (max-width: 1366px) {
   .pages-wrapper-v .pages-main .inner {
     width: 90%;
     margin: auto; } }
@@ -9351,12 +9380,15 @@ input[type="date"], input[type="time"] {
   display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 24px; }
 
 .account-links-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto; }
 
 .shopping_record_list-table {
   display: table;
@@ -9479,8 +9511,9 @@ input[type="date"], input[type="time"] {
   display: table-row; }
 
 .shopping_list-table .table_heading .table_cell {
-  padding: 12px 0;
-  border-bottom: 1px solid #FFD100; }
+  padding: 12px;
+  border-bottom: 1px solid #FFD100;
+  font-weight: normal; }
 
 .shopping_list-table .table_heading .table_cell.table_cell {
   border-radius: 0; }
@@ -9490,7 +9523,7 @@ input[type="date"], input[type="time"] {
 
 .shopping_list-table .table_row .table_cell {
   background-color: rgba(255, 209, 0, 0);
-  padding: 21px 0;
+  padding: 12px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
@@ -9536,5 +9569,102 @@ input[type="date"], input[type="time"] {
 
 .cart_quantity .justplayTicket_field-ctrler input {
   width: 50px; }
+
+.shopping_list-table.cart_table {
+  border: none; }
+
+.shopping_list-table.cart_table .cart_table-name {
+  max-width: 60%; }
+
+.shopping_list-table.cart_table .cart_table-price {
+  text-align: right; }
+
+.shopping_list-table.cart_table .cart_table-quantity {
+  width: 60px;
+  text-align: center; }
+
+.shopping_list-table.cart_table .cart_table-subtotal {
+  text-align: right; }
+
+.shopping_list-table.cart_table .cart_table-action {
+  width: 50px; }
+
+.shopping_list-table.cart_table .cart_table-total_row .table_cell {
+  background-color: transparent; }
+
+.shopping_list-table.cart_table .cart_table-total_row-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  border-bottom: 1px solid #FFD100;
+  padding-bottom: 32px;
+  padding-right: 62px;
+  padding-left: 24px; }
+
+.shopping_list-table.cart_table .cart_table-total_row-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px; }
+
+.shopping_list-table.cart_table .cart_table-total_row-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  padding-top: 32px;
+  padding-right: 62px;
+  padding-left: 24px; }
+
+.shopping_list-table.cart_table .cart_table-total_row-total .title {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: bold; }
+
+.shopping_list-table.cart_table .cart_table-total_row-total .txt {
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-weight: bold; }
+
+.shopping_list-table.cart_table .cart_pdt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px; }
+
+.shopping_list-table.cart_table .cart_pdt .pdt_img {
+  width: 230px; }
+
+.shopping_list-table.cart_table .cart_pdt .pdt_img .img_div {
+  border-radius: 16px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75.10204%;
+  background-size: cover; }
+
+.shopping_list-table.cart_table .cart_pdt .pdt_name {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: normal; }
 
 /*# sourceMappingURL=style.css.map */

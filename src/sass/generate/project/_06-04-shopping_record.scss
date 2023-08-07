@@ -131,10 +131,11 @@
 
         .table_heading {
             display: table-row;
-
+            
             .table_cell {
-                padding: 12px 0;
+                padding: 12px;
                 border-bottom: 1px solid color("Pri");
+                font-weight: normal;
                 &.table_cell {
                     border-radius: 0;
                 }
@@ -147,7 +148,7 @@
 
             .table_cell {
                 background-color: rgba(color("Pri"), 0);
-                padding: 21px 0;
+                padding: 12px;
                 &:last-of-type {
                     padding-left: 0;
                     padding-right: 0;

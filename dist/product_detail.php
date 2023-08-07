@@ -167,7 +167,7 @@
                         
                         
     
-    <module-field id="" class="justplayTicket_field  ">
+    <module-field id="quantity_field" class="justplayTicket_field quantity_field ">
         <label for="quantity" class="justplayTicket_field-label">數量</label>
         <div class="justplayTicket_field-ctrler">
             <button class="decrement" @click="decrement">
@@ -179,6 +179,7 @@
             </button>
         </div>
     </module-field>
+
 
                     </div>
                     <div class="pdt_btns">

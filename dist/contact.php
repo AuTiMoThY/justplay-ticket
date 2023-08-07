@@ -92,9 +92,14 @@
     <module-field id="" class="justplayTicket_field justplayTicket_field-v required">
         <label for="u_name" class="justplayTicket_field-label">姓名</label>
         <div class="justplayTicket_field-ctrler">
-            
-            <input type="text" id="u_name" name="u_name" v-model="u_name" class="form-control" placeholder="請輸入姓名">
-            
+            <input type="text"
+                id="u_name"
+                name="u_name"
+                v-model="u_name"
+                class="form-control"
+                placeholder="請輸入姓名"
+                value=""
+                >
         </div>
     </module-field>
 
@@ -106,9 +111,14 @@
     <module-field id="" class="justplayTicket_field justplayTicket_field-v required">
         <label for="u_phone" class="justplayTicket_field-label">電話</label>
         <div class="justplayTicket_field-ctrler">
-            
-            <input type="text" id="u_phone" name="u_phone" v-model="u_phone" class="form-control" placeholder="請輸入電話">
-            
+            <input type="text"
+                id="u_phone"
+                name="u_phone"
+                v-model="u_phone"
+                class="form-control"
+                placeholder="請輸入電話"
+                value=""
+                >
         </div>
     </module-field>
 
@@ -120,9 +130,14 @@
     <module-field id="" class="justplayTicket_field justplayTicket_field-v required">
         <label for="u_email" class="justplayTicket_field-label">EMAIL</label>
         <div class="justplayTicket_field-ctrler">
-            
-            <input type="text" id="u_email" name="u_email" v-model="u_email" class="form-control" placeholder="請輸入EMAIL">
-            
+            <input type="text"
+                id="u_email"
+                name="u_email"
+                v-model="u_email"
+                class="form-control"
+                placeholder="請輸入EMAIL"
+                value=""
+                >
         </div>
     </module-field>
 
@@ -134,9 +149,14 @@
     <module-field id="" class="justplayTicket_field justplayTicket_field-v ">
         <label for="u_order" class="justplayTicket_field-label">訂單編號</label>
         <div class="justplayTicket_field-ctrler">
-            
-            <input type="text" id="u_order" name="u_order" v-model="u_order" class="form-control" placeholder="請輸入訂單編號">
-            
+            <input type="text"
+                id="u_order"
+                name="u_order"
+                v-model="u_order"
+                class="form-control"
+                placeholder="請輸入訂單編號"
+                value=""
+                >
         </div>
     </module-field>
 

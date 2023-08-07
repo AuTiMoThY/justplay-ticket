@@ -7,10 +7,11 @@
     &-list {
         display: flex;
         flex-wrap: nowrap;
+        justify-content: center;
         gap: 24px;
     }
     &-item {
-        flex: 1;
+        flex: 0 1 auto;
     }
 }
 

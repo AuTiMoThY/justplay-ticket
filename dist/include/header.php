@@ -46,9 +46,14 @@
     <module-field id="" class="justplayTicket_field search_styled ">
         <label for="search" class="justplayTicket_field-label">搜尋</label>
         <div class="justplayTicket_field-ctrler">
-            
-            <input type="text" id="search" name="search" v-model="search" class="form-control" placeholder="搜尋">
-            
+            <input type="text"
+                id="search"
+                name="search"
+                v-model="search"
+                class="form-control"
+                placeholder="搜尋"
+                value=""
+                >
         </div>
     </module-field>
 

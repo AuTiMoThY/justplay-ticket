@@ -54,7 +54,7 @@
     max-width: percentage(1270 / 1524);
     margin: auto;
 
-    @include media-down(1280) {
+    @include media-down(1366) {
         max-width: 100%;
     }
 
@@ -98,7 +98,7 @@
         .inner {
             width: 750px;
 
-            @include media-down(1280) {
+            @include media-down(1366) {
                 width: 90%;
                 margin: auto;
             }

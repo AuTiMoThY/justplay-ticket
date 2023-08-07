@@ -86,13 +86,15 @@
                     <div class="pdt_price">$300 - $1,080</div>
                     <div class="pdt_quantity">
                         {% set fieldSet = {
-                            "field_class": "",
+                            "field_class": "quantity_field",
+                            "id": "quantity_field",
                             "name": "quantity",
                             "isRequired": 0,
                             "label": "數量",
                             "IMG_PATH": IMG_PATH
                         } %}
                         {{field.quantity(PROJECT_NAME, fieldSet)}}
+
                     </div>
                     <div class="pdt_btns">
                         <button type="button" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-cart">

@@ -67,9 +67,14 @@
     <module-field id="" class="justplayTicket_field justplayTicket_field-v ">
         <label for="email" class="justplayTicket_field-label">EMAIL(帳號)</label>
         <div class="justplayTicket_field-ctrler">
-            
-            <input type="text" id="email" name="email" v-model="email" class="form-control" placeholder="example@justplay.com" value="example@justplay.com" disabled>
-            
+            <input type="text"
+                id="email"
+                name="email"
+                v-model="email"
+                class="form-control"
+                placeholder="example@justplay.com"
+                value="example@justplay.com"
+                disabled>
         </div>
     </module-field>
 
@@ -81,9 +86,14 @@
     <module-field id="" class="justplayTicket_field justplayTicket_field-v  required">
         <label for="name" class="justplayTicket_field-label">姓名</label>
         <div class="justplayTicket_field-ctrler">
-            
-            <input type="text" id="name" name="name" v-model="name" class="form-control" placeholder="請輸入姓名">
-            
+            <input type="text"
+                id="name"
+                name="name"
+                v-model="name"
+                class="form-control"
+                placeholder="請輸入姓名"
+                value=""
+                >
         </div>
     </module-field>
 
@@ -95,9 +105,14 @@
     <module-field id="" class="justplayTicket_field justplayTicket_field-v  required">
         <label for="phone" class="justplayTicket_field-label">電話</label>
         <div class="justplayTicket_field-ctrler">
-            
-            <input type="text" id="phone" name="phone" v-model="phone" class="form-control" placeholder="請輸入電話，EX: 0912-345678 或 02-34567890">
-            
+            <input type="text"
+                id="phone"
+                name="phone"
+                v-model="phone"
+                class="form-control"
+                placeholder="請輸入電話，EX: 0912-345678 或 02-34567890"
+                value=""
+                >
         </div>
     </module-field>
 
@@ -109,9 +124,14 @@
     <module-field id="" class="justplayTicket_field justplayTicket_field-v  required">
         <label for="addr" class="justplayTicket_field-label">地址</label>
         <div class="justplayTicket_field-ctrler">
-            
-            <input type="text" id="addr" name="addr" v-model="addr" class="form-control" placeholder="請輸入地址">
-            
+            <input type="text"
+                id="addr"
+                name="addr"
+                v-model="addr"
+                class="form-control"
+                placeholder="請輸入地址"
+                value=""
+                >
         </div>
     </module-field>
 

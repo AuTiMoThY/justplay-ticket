@@ -16,6 +16,19 @@ $rcx-txt-color: color("Black");
 
 	// width: 100%;
 	height: 100%;
+	&-wrap {
+		&-v {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+
+		}
+
+		&-field {
+			display: flex;
+			gap: 24px;
+		}
+	}
 
 	&-label {
 		margin-bottom: 0;

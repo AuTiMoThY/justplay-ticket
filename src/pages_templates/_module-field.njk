@@ -12,11 +12,14 @@ isDisabled
     <module-field id="{% if fieldSet.id != '' %}{{fieldSet.id}}{% endif %}" class="{{PROJECT_NAME}}_field {{fieldSet.field_class}} {% if fieldSet.isRequired %}required{% endif %}">
         <label for="{{fieldSet.name}}" class="{{PROJECT_NAME}}_field-label">{{fieldSet.label}}</label>
         <div class="{{PROJECT_NAME}}_field-ctrler">
-            {% if fieldSet.value != '' and fieldSet.isDisabled %}
-            <input type="{{type}}" id="{{fieldSet.name}}" name="{{fieldSet.name}}" v-model="{{fieldSet.name}}" class="form-control" placeholder="{{fieldSet.placeholder}}" value="{{fieldSet.value}}" disabled>
-            {% else %}
-            <input type="{{type}}" id="{{fieldSet.name}}" name="{{fieldSet.name}}" v-model="{{fieldSet.name}}" class="form-control" placeholder="{{fieldSet.placeholder}}">
-            {% endif %}
+            <input type="{{type}}"
+                id="{{fieldSet.name}}"
+                name="{{fieldSet.name}}"
+                v-model="{{fieldSet.name}}"
+                class="form-control"
+                placeholder="{{fieldSet.placeholder}}"
+                {% if fieldSet.value != '' %}value="{{fieldSet.value}}"{% endif %}
+                {% if fieldSet.isDisabled %}disabled{% endif %}>
         </div>
     </module-field>
 {% endmacro %}
@@ -102,6 +105,9 @@ IMG_PATH
 {% endmacro %}
 
 {% macro rcx(PROJECT_NAME, fieldSet, type = 'radio') %}
+{# id
+nameArr
+text #}
     <div class="{{ PROJECT_NAME }}_rcx">
         <label for="{{ fieldSet.id }}" class="{{ PROJECT_NAME }}_rcx-label">
             <input type="{{ type }}" id="{{ fieldSet.id }}" name="{{ fieldSet.nameArr }}" class="{{ PROJECT_NAME }}_rcx-input" value="{{ fieldSet.text }}">

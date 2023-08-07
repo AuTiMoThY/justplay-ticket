@@ -17,3 +17,99 @@
         }
     }
 }
+
+.shopping_list-table.cart_table {
+    border: none;
+
+    .cart_table {
+
+        &-name {
+            // width: 50%;
+            max-width: 60%;
+        }
+
+        &-price {
+            text-align: right;
+        }
+
+        &-quantity {
+            width: 60px;
+            text-align: center;
+        }
+
+        &-subtotal {
+            text-align: right;
+        }
+
+        &-action {
+            width: 50px;
+        }
+
+        &-total_row {
+            .table_cell {
+                background-color: transparent;
+            }
+
+            &-inner {
+
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                border-bottom: 1px solid color("Pri");
+                padding-bottom: 32px;
+                padding-right: 50px + 12;
+                padding-left: 24px;
+            }
+
+            &-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 24px;
+            }
+
+            &-total {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 24px;
+
+                padding-top: 32px;
+                padding-right: 50px + 12;
+                padding-left: 24px;
+
+                .title {
+                    @include remCalc(font-size, 22);
+                    font-weight: bold;
+                }
+
+                .txt {
+                    @include remCalc(font-size, 28);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    
+    .cart_pdt {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        .pdt_img {
+            width: 230px;
+            .img_div {
+                border-radius: 16px;
+                @include rwdBlock(490, 368);
+            }
+        }
+
+        .pdt_name {
+            @include remCalc(font-size, 16);
+            font-weight: normal;
+        }
+    }
+}

@@ -63,6 +63,12 @@ input[type="time"] {
     position: relative;
     margin-bottom: 0;
     // margin-bottom: 1.25rem;
+
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+
+    
 }
 
 .#{$PROJECT_NAME}_frm {
