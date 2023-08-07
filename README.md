@@ -10,10 +10,8 @@
 - jQuery 版本：3.3.1
 
 - js位置
-
--- 全域JS: dist/assets/js/script.js
-
--- 個別頁面JS: dist/assets/js/*.js (JS檔名對應頁面名稱)
+	 - 全域JS: dist/assets/js/script.js
+	 - 個別頁面JS: dist/assets/js/*.js (JS檔名對應頁面名稱)
 
 
 - - -
