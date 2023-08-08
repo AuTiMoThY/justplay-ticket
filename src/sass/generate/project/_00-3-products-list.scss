@@ -2,6 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 48px 24px ;
+
+    @include media-down(576) {
+        gap: 24px;
+    }
 }
 
 

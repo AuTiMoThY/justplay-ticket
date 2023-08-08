@@ -73,6 +73,7 @@
                 {% for item in footerMenu %}
                     <li class="site_footer-menu-item">
                         <div class="site_footer--title"><a href="{{item.url}}" class="link">{{item.title}}</a></div>
+                        {% if item.list|length >= 1 %}
                         <ul class="sublist lis-n">
                             {% for subitem in item.list %}
                             <li class="subitem">
@@ -80,6 +81,7 @@
                             </li>
                             {% endfor %}
                         </ul>
+                        {% endif %}
                     </li>
                 {% endfor %}
 

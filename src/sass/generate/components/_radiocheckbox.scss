@@ -53,6 +53,7 @@ $rcx-txt-color: color("Black");
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			flex: 0 0 auto;
 			
 			@include circle(32);
 			// border-radius: 5px;

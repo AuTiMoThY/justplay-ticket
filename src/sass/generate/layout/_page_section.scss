@@ -31,9 +31,11 @@
         @include media-down(768) {
             flex-direction: column;
             align-items: flex-start;
+            gap: 16px;
+            padding-bottom: 24px;
 
-            .more {
-                align-self: flex-end;
+            .subtitle {
+                // align-self: flex-end;
             }
         }
 
@@ -43,7 +45,7 @@
             align-items: center;
             // gap: 40px;
 
-            height: 60px;
+            height: auto;
             margin-bottom: 0;
 
             [class^=image_replacement] {
@@ -54,6 +56,10 @@
             .icon {
                 @include absolute(50%, $L:calc(100% + 40px));
                 translate: 0 -50%;
+
+                @include media-down(768) {
+                    left: calc(100% + 24px);
+                }
             }
         }
 
@@ -71,9 +77,9 @@
                 }
             }
 
-            &:hover {
-                color: color("Pri");
-            }
+            // &:hover {
+            //     color: color("Pri");
+            // }
         }
 
     }

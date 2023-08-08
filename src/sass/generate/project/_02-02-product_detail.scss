@@ -18,11 +18,25 @@
         justify-content: space-between;
         gap: percentage(153 / 1524);
         padding-top: 48px;
+
+        @include media-down(1366) {
+            gap: 48px;
+        }
+
+        @include media-down(1200) {
+            flex-direction: column;
+        }
     }
 
     &-img {
         flex: 0 0 auto;
         width: percentage(750 / 1524);
+
+        @include media-down(1200) {
+            width: 100%;
+            max-width: 950px;
+            inset: auto;
+        }
     }
     &-info {
         flex: 1;
@@ -143,6 +157,10 @@
 .pdt_summary {
     padding-top: 24px;
     border-top: 1px solid color("Pri");
+
+    @include media-down(1200) {
+        width: 100%;
+    }
 }
 
 .product_detail__main {
@@ -152,5 +170,16 @@
         background-color: #fff;
         border-radius: 10px;
         padding: 130px;
+
+        @include media-down(1024) {
+            padding: 80px;
+        }
+
+        @include media-down(768) {
+            padding: 48px;
+        }
+        @include media-down(576) {
+            padding: 24px;
+        }
     }
 }

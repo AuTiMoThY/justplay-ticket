@@ -12,8 +12,8 @@
 	align-items: center;
 	justify-content: center;
 	@include circle(40);
-	background-color: rgba(#fff, 0.3);
-	color: color("Pri");
+	background-color: rgba(color("Pri"), 0.5);
+	color: #fff;
 
 	// box-shadow: 1px 1px 5px rgba(#72705B, 0.3);
 	transition: $transition-base;
@@ -28,7 +28,7 @@
 
 	&:hover {
 		z-index: 2;
-        background-color: rgba(#fff, 0.8);
+        background-color: rgba(color("Pri"), 0.8);
 		box-shadow: 1px 1px 5px rgba(#72705B, 0.8);
 	}
 }
@@ -46,7 +46,7 @@
 	// 	gap: 24px;
 	// }
 
-	@include media-down(md) {
+	@include media-down(1200) {
 		width: 90%;
 	}
 	&-next {

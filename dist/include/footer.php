@@ -16,6 +16,7 @@
                 
                     <li class="site_footer-menu-item">
                         <div class="site_footer--title"><a href="about.php" class="link">關於我們</a></div>
+                        
                         <ul class="sublist lis-n">
                             
                             <li class="subitem">
@@ -39,10 +40,12 @@
                             </li>
                             
                         </ul>
+                        
                     </li>
                 
                     <li class="site_footer-menu-item">
                         <div class="site_footer--title"><a href="notice.php" class="link">購買須知</a></div>
+                        
                         <ul class="sublist lis-n">
                             
                             <li class="subitem">
@@ -58,10 +61,12 @@
                             </li>
                             
                         </ul>
+                        
                     </li>
                 
                     <li class="site_footer-menu-item">
                         <div class="site_footer--title"><a href="promotion.php" class="link">官網禮遇</a></div>
+                        
                         <ul class="sublist lis-n">
                             
                             <li class="subitem">
@@ -77,13 +82,12 @@
                             </li>
                             
                         </ul>
+                        
                     </li>
                 
                     <li class="site_footer-menu-item">
                         <div class="site_footer--title"><a href="contact.php" class="link">聯絡我們</a></div>
-                        <ul class="sublist lis-n">
-                            
-                        </ul>
+                        
                     </li>
                 
 

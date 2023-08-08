@@ -14,7 +14,9 @@
 
 		img {
 			@include wh($webLogo-w, $webLogo-h);
-
+			@include media-down(576) {
+				@include wh(130, 38);
+			}
 		}
 	}
 

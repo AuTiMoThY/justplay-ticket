@@ -1,3 +1,10 @@
+.home_hot {
+    @include media-down(576) {
+        &.page_section.page_section {
+            padding-top: 100px;
+        }
+    }
+}
 .home_hot-hd {
     .title {
         @include image_replacement(218, 58);
@@ -13,6 +20,10 @@
 
 .home_hot-bd {
     padding-top: 100px;
+
+    @include media-down(768) {
+        padding-top: 50px;
+    }
 }
 
 .home_hot-more {
