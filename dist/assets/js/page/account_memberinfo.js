@@ -19,6 +19,11 @@ $(function () {
             presence: {
                 message: "地址 是必填欄位"
             }
+        },
+        "recaptcha": {
+            presence: {
+                message: "驗證碼 是必填欄位"
+            }
         }
     }
     justplayUI.frmValidate($frm, constraints);

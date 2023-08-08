@@ -9,6 +9,10 @@
         flex-wrap: nowrap;
         justify-content: center;
         gap: 24px;
+
+        @include media-down(768) {
+            flex-direction: column;
+        }
     }
     &-item {
         flex: 0 1 auto;
