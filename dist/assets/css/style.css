@@ -4895,7 +4895,7 @@ textarea.form-control {
   --gap: 24px;
   --spacing: 104px; }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   :root {
     --spacing: calc(104px / 2); } }
 
@@ -7385,6 +7385,18 @@ input[type="date"], input[type="time"] {
   display: -ms-flexbox;
   display: flex; }
 
+.justplayTicket_field.recaptcha_field .justplayTicket_field-ctrler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.justplayTicket_field.recaptcha_field img {
+  border: none;
+  width: 180px;
+  height: 50px;
+  border-radius: 0 8px 8px 0;
+  background-color: #D8D8D8; }
+
 .justplayTicket_field.has-error .justplayTicket_field-ctrler {
   border: 1px solid #FF2B2B; }
 
@@ -9484,6 +9496,10 @@ input[type="date"], input[type="time"] {
 .contact_main-bd {
   padding-top: 120px; }
 
+@media (max-width: 768px) {
+  .contact_main-bd {
+    padding-top: var(--spacing); } }
+
 .contact_main-bd .pages-heading {
   background-image: url(../images/contact-hd-bg.jpg);
   background-repeat: no-repeat;
@@ -9524,8 +9540,20 @@ input[type="date"], input[type="time"] {
           flex-direction: row;
   gap: 55px; }
 
+@media (max-width: 576px) {
+  .contact_main-info-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px; } }
+
 .contact_main-info-item .title {
   min-width: 90px; }
+
+@media (max-width: 576px) {
+  .contact_main-info-item .title {
+    font-weight: bold; } }
 
 .contact_main-info-item .social-list {
   display: -webkit-box;

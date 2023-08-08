@@ -24,6 +24,33 @@ isDisabled
     </module-field>
 {% endmacro %}
 
+{% macro recaptcha(PROJECT_NAME, fieldSet, type = 'text') %}
+    {# 
+field_class
+id
+name
+isRequired
+label
+placeholder
+value
+isDisabled
+ #}
+    <module-field id="{% if fieldSet.id and fieldSet.id != '' %}{{fieldSet.id}}{% endif %}" class="{{PROJECT_NAME}}_field {{fieldSet.field_class}} {% if fieldSet.isRequired %}required{% endif %}">
+        <label for="{{fieldSet.name}}" class="{{PROJECT_NAME}}_field-label">{{fieldSet.label}}</label>
+        <div class="{{PROJECT_NAME}}_field-ctrler">
+            <input type="{{type}}"
+                id="{{fieldSet.name}}"
+                name="{{fieldSet.name}}"
+                v-model="{{fieldSet.name}}"
+                class="form-control"
+                placeholder="{{fieldSet.placeholder}}"
+                {% if fieldSet.value != '' %}value="{{fieldSet.value}}"{% endif %}
+                {% if fieldSet.isDisabled %}disabled{% endif %}>
+            <img src="" alt="">
+        </div>
+    </module-field>
+{% endmacro %}
+
 {% macro password(PROJECT_NAME, fieldSet) %}
     {# 
 field_class

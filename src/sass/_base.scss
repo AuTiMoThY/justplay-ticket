@@ -1,7 +1,7 @@
 :root {
     --gap: 24px;
     --spacing: 104px;
-    @include md-sm {
+    @include media-down(768) {
         --spacing: calc(104px / 2);
     }
 }

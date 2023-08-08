@@ -6,6 +6,9 @@
 
 .contact_main-bd {
     padding-top: 120px;
+    @include media-down(768) {
+        padding-top: var(--spacing);
+    }
     .pages-heading {
         background-image: url(../images/contact-hd-bg.jpg);
         background-repeat: no-repeat;
@@ -35,13 +38,23 @@
     @include remCalc(font-size, 18);
     letter-spacing: 1px;
 
+
+
     &-item {
         display: flex;
         flex-direction: row;
         gap: 55px;
 
+        @include media-down(576) {
+            flex-direction: column;
+            gap: 8px;
+        }
+
         .title {
             min-width: 90px;
+            @include media-down(576) {
+                font-weight: bold;
+            }
         }
 
         .social-list {

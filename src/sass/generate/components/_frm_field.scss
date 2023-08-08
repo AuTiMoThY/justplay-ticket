@@ -136,6 +136,18 @@
         }
     }
 
+    &.recaptcha_field {
+        .#{$PROJECT_NAME}_field-ctrler {
+            display: flex;
+        }
+        img {
+            border: none;
+            @include wh(180, 50);
+            border-radius: 0 8px 8px 0;
+            background-color: color("Gray-02");
+        }
+    }
+
     &.has-error {
         .#{$PROJECT_NAME}_field-ctrler {
             border: 1px solid color("danger");
