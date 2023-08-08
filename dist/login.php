@@ -119,6 +119,8 @@
         <!-- =========================================================================-->
         <?php include 'include/script.php'; ?>
         
+<script src="./assets/js/page/login.js?v=20230727"></script>
+
     </body>
 
 </html>
