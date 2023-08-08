@@ -12,9 +12,17 @@ $(function () {
             }
         },
         confirmPassword: {
+            presence: {
+                message: "確認新密碼 是必填欄位"
+            },
             equality: {
                 attribute: "password",
                 message: "密碼不正確，請再次輸入"
+            }
+        },
+        "recaptcha": {
+            presence: {
+                message: "驗證碼 是必填欄位"
             }
         }
 
