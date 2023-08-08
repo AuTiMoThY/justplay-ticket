@@ -218,9 +218,11 @@ customElement() {
                     }
                     const $ctrler = $(this).find("[class$=-ctrler]");
 
+                    // 日期選擇
                     if ($(this).hasClass("date_field")) {
                         // $ctrler.addClass("input-group");
                         const input_id = $(this).find("input").attr("id");
+                        console.log(input_id);
                         $ctrler.append($("<div>", {
                             class: "icon"
                         }).append("<i class=\"fa-solid fa-calendar-days\"></i>"));

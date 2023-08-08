@@ -8501,6 +8501,11 @@ input[type="date"], input[type="time"] {
   padding-top: 120px;
   padding-bottom: 120px; }
 
+@media (max-width: 768px) {
+  .pages-wrapper-v .pages-main {
+    padding-top: var(--spacing);
+    padding-bottom: var(--spacing); } }
+
 .pages-wrapper-v .pages-main .inner {
   width: 750px; }
 

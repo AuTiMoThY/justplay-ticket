@@ -155,6 +155,10 @@
         border-radius: 0 0 30px 30px;
         @include padding("y", 120px);
 
+        @include media-down(768) {
+            @include padding("y", var(--spacing));
+        }
+
         .inner {
             width: 750px;
 
