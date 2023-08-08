@@ -14,10 +14,11 @@
                     <span class="txt">購買須知</span>
                 </div>
             </div>
-            <div class="page_section-bd notice_main-bd pages-wrapper">
-                <aside class="pages-aside">
+            <div id="pagesWrapper" class="page_section-bd notice_main-bd pages-wrapper">
+                <aside class="pages-aside" @click.prevent="toogleAside($event)" :class="{ 'js-open-aside': isOpenAside }">
                     <div class="pages-aside-inner">
                         <ul class="pages-aside-list lis-n">
+                            <!-- 若在當前頁面，class加上"js-active" -->
                             <li class="pages-aside-item js-active">
                                 <a href="javascript:;" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">預購說明</a>
                             </li>

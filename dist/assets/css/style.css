@@ -8336,10 +8336,42 @@ input[type="date"], input[type="time"] {
   gap: 5.51181%;
   padding-top: 48px; }
 
+@media (max-width: 1024px) {
+  .pages-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 48px; } }
+
 .pages-wrapper .pages-aside {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 234px;
           flex: 0 0 234px; }
+
+@media (max-width: 1024px) {
+  .pages-wrapper .pages-aside {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    position: relative; }
+  .pages-wrapper .pages-aside::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 28px;
+    right: 1.5rem;
+    width: 0;
+    height: 0;
+    content: '';
+    z-index: 2;
+    border-top: 9.6px solid currentcolor;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent; }
+  .pages-wrapper .pages-aside.js-open-aside .justplayTicket_btn-style1 {
+    min-height: 60px;
+    padding-top: 1rem;
+    padding-bottom: 1rem; } }
 
 .pages-wrapper .pages-aside-list {
   display: -webkit-box;
@@ -8350,6 +8382,31 @@ input[type="date"], input[type="time"] {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px; }
+
+@media (max-width: 1024px) {
+  .pages-wrapper .pages-aside-list {
+    gap: 0;
+    border: 1px solid #FFD100;
+    border-radius: 32px;
+    overflow: hidden; } }
+
+@media (max-width: 1024px) {
+  .pages-wrapper .pages-aside-item .justplayTicket_btn-style1 {
+    border: none;
+    border-radius: 0;
+    height: 0;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; } }
+
+@media (max-width: 1024px) {
+  .pages-wrapper .pages-aside-item.js-active .justplayTicket_btn-style1 {
+    min-height: 60px;
+    padding-top: 1rem;
+    padding-bottom: 1rem; } }
 
 .pages-wrapper .pages-main {
   padding: 44px 100px;
@@ -8362,6 +8419,14 @@ input[type="date"], input[type="time"] {
   margin-bottom: 18px;
   border-bottom: 1px solid #FFD100;
   color: #FFD100; }
+
+@media (max-width: 768px) {
+  .pages-wrapper .pages-main {
+    padding: 48px; } }
+
+@media (max-width: 576px) {
+  .pages-wrapper .pages-main {
+    padding: 24px; } }
 
 .pages-wrapper-v {
   max-width: 83.33333%;

@@ -52,7 +52,7 @@
                 v-model="search"
                 class="form-control"
                 placeholder="搜尋"
-                value=""
+                
                 >
         </div>
     </module-field>

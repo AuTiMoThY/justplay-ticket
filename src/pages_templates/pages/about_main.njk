@@ -14,24 +14,25 @@
                     <span class="txt">關於我們</span>
                 </div>
             </div>
-            <div class="page_section-bd about_main-bd pages-wrapper">
-                <aside class="pages-aside">
+            <div id="pagesWrapper" class="page_section-bd about_main-bd pages-wrapper">
+                <aside class="pages-aside" @click.prevent="toogleAside($event)" :class="{ 'js-open-aside': isOpenAside }">
                     <div class="pages-aside-inner">
                         <ul class="pages-aside-list lis-n">
+                            <!-- 若在當前頁面，class加上"js-active" -->
                             <li class="pages-aside-item js-active">
-                                <a href="javascript:;" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">商店介紹</a>
+                                <a href="about.php" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">商店介紹</a>
                             </li>
                             <li class="pages-aside-item">
-                                <a href="javascript:;" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">門市資訊</a>
+                                <a href="about.php" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">門市資訊</a>
                             </li>
                             <li class="pages-aside-item">
-                                <a href="javascript:;" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">經營理念</a>
+                                <a href="about.php" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">經營理念</a>
                             </li>
                             <li class="pages-aside-item">
-                                <a href="javascript:;" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">隱私權條款</a>
+                                <a href="about.php" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">隱私權條款</a>
                             </li>
                             <li class="pages-aside-item">
-                                <a href="javascript:;" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">會員條款</a>
+                                <a href="about.php" class="link {{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-style1">會員條款</a>
                             </li>
                         </ul>
                     </div>

@@ -44,10 +44,11 @@
                     <span class="txt">官網禮遇</span>
                 </div>
             </div>
-            <div class="page_section-bd promotion_main-bd pages-wrapper">
-                <aside class="pages-aside">
+            <div id="pagesWrapper" class="page_section-bd promotion_main-bd pages-wrapper">
+                <aside class="pages-aside" @click.prevent="toogleAside($event)" :class="{ 'js-open-aside': isOpenAside }">
                     <div class="pages-aside-inner">
                         <ul class="pages-aside-list lis-n">
+                            <!-- 若在當前頁面，class加上"js-active" -->
                             <li class="pages-aside-item js-active">
                                 <a href="javascript:;" class="link justplayTicket_btn justplayTicket_btn-style1">生日小禮</a>
                             </li>
