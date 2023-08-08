@@ -508,7 +508,7 @@
         <!-- =========================================================================-->
         <?php include 'include/script.php'; ?>
         
-<script src="./assets/js/page/cart.js?v=20230727"></script>
+<script src="./assets/js/page/cart.js?v=20230808"></script>
 
     </body>
 

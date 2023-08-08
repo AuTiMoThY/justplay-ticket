@@ -28,7 +28,7 @@
 <script src="https://validatejs.org/validate.js"></script>
 
 <!-- script -->
-<script src="./assets/js/script.js?v=20230727"></script>
+<script src="./assets/js/script.js?v=20230808"></script>
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v15.0" nonce="0KQ5ZY2g"></script>

@@ -1,2 +1,2 @@
 
-const CONFIG = {"VERSION":"20230727","PROJECT_NAME":"justplayTicket"};
+const CONFIG = {"VERSION":"20230808","PROJECT_NAME":"justplayTicket"};

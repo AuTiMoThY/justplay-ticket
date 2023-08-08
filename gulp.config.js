@@ -1,5 +1,5 @@
 const project = "justplayTicket";
-const version = "20230727";
+const version = "20230808";
 const codxfolder = "20230727-justplay-ticket-github";
 
 const entry = 'src';
