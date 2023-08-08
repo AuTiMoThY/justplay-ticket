@@ -67,7 +67,26 @@
     </module-field>
 
                             </div>
+                            <div class="form-group">
+                                
+                                
+    
+    <module-field id="" class="justplayTicket_field justplayTicket_field-v recaptcha_field required">
+        <label for="recaptcha" class="justplayTicket_field-label">驗證碼</label>
+        <div class="justplayTicket_field-ctrler">
+            <input type="text"
+                id="recaptcha"
+                name="recaptcha"
+                v-model="recaptcha"
+                class="form-control"
+                placeholder="請輸入驗證碼"
+                value=""
+                >
+            <img src="" alt="">
+        </div>
+    </module-field>
 
+                            </div>
                             <div class="form-btns">
                                 <button type="submit" class="justplayTicket_btn justplayTicket_btn-Pri">
                                     SEND
@@ -104,6 +123,8 @@
         <!-- =========================================================================-->
         <?php include 'include/script.php'; ?>
         
+<script src="./assets/js/page/forgot_pw.js?v=20230727"></script>
+
     </body>
 
 </html>
