@@ -58,26 +58,29 @@
                 </div>
                 <div class="pages-wrapper-v-pattern"></div>
                 <div class="pages-main">
-                    <div class="inner shopping_list-wrapper">
+                    <div class="inner">
                         <div class="shopping_list-heading">
                             <h3 class="title">訂購商品列表</h3>
                         </div>
-                        <div class="shopping_list-table">
-                            <div class="table_heading">
-                                <div class="table_cell" data-ref="品名">品名</div>
-                                <div class="table_cell" data-ref="單價">單價</div>
-                                <div class="table_cell" data-ref="數量">數量</div>
-                                <div class="table_cell" data-ref="小記">小記</div>
-                            </div>
-                            {% for i in range(0, 5) %}
-                                <div class="table_row">
-                                    <div class="table_cell" data-ref="品名">桃園青埔｜Xpark 都會型水生公園門票</div>
-                                    <div class="table_cell" data-ref="單價">$550</div>
-                                    <div class="table_cell" data-ref="數量">1</div>
-                                    <div class="table_cell" data-ref="小記">$550</div>
+                        <div class="shopping_list-wrapper">
+                            <div class="shopping_list-table">
+                                <div class="table_heading">
+                                    <div class="table_cell" data-ref="品名">品名</div>
+                                    <div class="table_cell" data-ref="單價">單價</div>
+                                    <div class="table_cell" data-ref="數量">數量</div>
+                                    <div class="table_cell" data-ref="小記">小記</div>
                                 </div>
-                            {% endfor %}
+                                {% for i in range(0, 5) %}
+                                    <div class="table_row">
+                                        <div class="table_cell" data-ref="品名">桃園青埔｜Xpark 都會型水生公園門票</div>
+                                        <div class="table_cell" data-ref="單價">$550</div>
+                                        <div class="table_cell" data-ref="數量">1</div>
+                                        <div class="table_cell" data-ref="小記">$550</div>
+                                    </div>
+                                {% endfor %}
+                            </div>
                         </div>
+
                         <div class="shopping_list-ft">
                             <a href="account_shopping_record_list.php" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
                                 BACK

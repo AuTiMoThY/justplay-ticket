@@ -9618,9 +9618,13 @@ input[type="date"], input[type="time"] {
       -ms-flex: 0 1 auto;
           flex: 0 1 auto; }
 
+.account_shopping_record_list_main-bd .account-container {
+  overflow-x: auto; }
+
 .shopping_record_list-table {
   display: table;
   width: 100%;
+  min-width: 750px;
   border-bottom: 1px solid #FFD100; }
 
 .shopping_record_list-table .table_heading {
@@ -9719,6 +9723,9 @@ input[type="date"], input[type="time"] {
   border-bottom: 1px solid #FFD100;
   padding: 16px 0; }
 
+.shopping_list-wrapper {
+  overflow-x: auto; }
+
 .shopping_list-heading {
   background-color: #FFD100;
   border-radius: 8px;
@@ -9733,6 +9740,7 @@ input[type="date"], input[type="time"] {
 .shopping_list-table {
   display: table;
   width: 100%;
+  min-width: 750px;
   border-bottom: 1px solid #FFD100; }
 
 .shopping_list-table .table_heading {

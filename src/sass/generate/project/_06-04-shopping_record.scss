@@ -1,6 +1,12 @@
+.account_shopping_record_list_main-bd {
+    .account-container {
+        overflow-x: auto;
+    }
+}
 .shopping_record_list-table {
     display: table;
     width: 100%;
+    min-width: 750px;
     border-bottom: 1px solid color("Pri");
 
     .table_heading {
@@ -72,6 +78,10 @@
             margin: auto;
         }
     }
+
+    // .account-container {
+    //     overflow-x: auto;
+    // }
 }
 
 .shopping_base {
@@ -112,6 +122,9 @@
 }
 
 .shopping_list {
+    &-wrapper {
+        overflow-x: auto;
+    }
     &-heading {
         background-color: color("Pri");
         border-radius: 8px;
@@ -127,6 +140,7 @@
     &-table {
         display: table;
         width: 100%;
+        min-width: 750px;
         border-bottom: 1px solid color("Pri");
 
         .table_heading {
