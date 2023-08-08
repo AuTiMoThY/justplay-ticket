@@ -90,6 +90,27 @@
                         
                     </li>
                 
+                    <li class="site_footer-menu-item">
+                        <div class="site_footer--title"><a href="account_memberinfo.php" class="link">會員中心</a></div>
+                        
+                        <ul class="sublist lis-n">
+                            
+                            <li class="subitem">
+                                <a href="account_memberinfo.php" class="link">會員資料修改</a>
+                            </li>
+                            
+                            <li class="subitem">
+                                <a href="account_change_pw.php" class="link">會員密碼修改</a>
+                            </li>
+                            
+                            <li class="subitem">
+                                <a href="account_shopping_record_list.php" class="link">購物記錄</a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                
 
             </ul>
         </section>
