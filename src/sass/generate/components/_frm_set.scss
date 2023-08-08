@@ -68,7 +68,9 @@ input[type="time"] {
     flex-wrap: nowrap;
     gap: 24px;
 
-    
+    @include media-down(768) {
+        flex-direction: column;
+    }
 }
 
 .#{$PROJECT_NAME}_frm {

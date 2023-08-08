@@ -24,21 +24,21 @@
                             </li>
                         </ul>
                         <div class="account-container">
+                            <div class="shopping_list-heading">
+                                <h3 class="title">訂購商品列表</h3>
+                            </div>
                             <div class="shopping_list-wrapper">
-                                <div class="shopping_list-heading">
-                                    <h3 class="title">訂購商品列表</h3>
-                                </div>
-                                <table class="shopping_list-table cart_table">
-                                    <tr class="table_heading">
-                                        <th class="table_cell cart_table-name" data-ref="品名">品名</th>
-                                        <th class="table_cell cart_table-price" data-ref="單價">單價</th>
-                                        <th class="table_cell cart_table-quantity" data-ref="數量">數量</th>
-                                        <th class="table_cell cart_table-subtotal" data-ref="小記">小記</th>
-                                        <th class="table_cell cart_table-action" data-ref="操作">&nbsp;</th>
-                                    </tr>
+                                <div class="shopping_list-table cart_table">
+                                    <div class="table_heading">
+                                        <div class="table_cell cart_table-name" data-ref="品名">品名</div>
+                                        <div class="table_cell cart_table-price" data-ref="單價">單價</div>
+                                        <div class="table_cell cart_table-quantity" data-ref="數量">數量</div>
+                                        <div class="table_cell cart_table-subtotal" data-ref="小記">小記</div>
+                                        <div class="table_cell cart_table-action" data-ref="操作">&nbsp;</div>
+                                    </div>
                                     {% for i in range(0, 5) %}
-                                        <tr class="table_row">
-                                            <td class="table_cell cart_table-name" data-ref="品名">
+                                        <div class="table_row">
+                                            <div class="table_cell cart_table-name" data-ref="品名">
                                                 <div class="cart_pdt">
                                                     <div class="pdt_img">
                                                         <div class="img_div">
@@ -49,9 +49,9 @@
                                                     桃園青埔｜Xpark 都會型水生公園門票
                                                 </div>
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-price" data-ref="單價">$550</td>
-                                            <td class="table_cell cart_table-quantity" data-ref="數量">
+                                            </div>
+                                            <div class="table_cell cart_table-price" data-ref="單價">$550</div>
+                                            <div class="table_cell cart_table-quantity" data-ref="數量">
                                                 <div class="cart_quantity">
                                                     {% set fieldSet = {
                                                         "field_class": "quantity_field",
@@ -63,37 +63,34 @@
                                                     } %}
                                                     {{field.quantity(PROJECT_NAME, fieldSet)}}
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-subtotal" data-ref="小記">$550</td>
-                                            <td class="table_cell cart_table-action" data-ref="操作">
+                                            </div>
+                                            <div class="table_cell cart_table-subtotal" data-ref="小記">$550</div>
+                                            <div class="table_cell cart_table-action" data-ref="操作">
                                                 <button type="button" class="del_btn">
                                                     <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-del.svg"></svg>
                                                 </button>
-                                            </td>
-                                        </tr>
-                                    {% endfor %}
-                                    <tr class="table_row cart_table-total_row">
-                                        <td class="table_cell"></td>
-                                        <td class="table_cell" colspan="4">
-                                            <div class="cart_table-total_row-inner">
-                                                <ul class="cart_table-total_row-list lis-n">
-                                                    <div class="cart_table-total_row-item">
-                                                        <div class="title">合計</div>
-                                                        <div class="txt">NT$ 2,750</div>
-                                                    </div>
-                                                    <div class="cart_table-total_row-item">
-                                                        <div class="title">運費</div>
-                                                        <div class="txt">NT$ 0</div>
-                                                    </div>
-                                                </ul>
-                                                <div class="cart_table-total_row-total">
-                                                    <div class="title">總金額</div>
-                                                    <div class="txt txt-danger">NT$ 2,750</div>
-                                                </div>
                                             </div>
-                                        </td>
-                                    </tr>
-                                </table>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="cart_table-total_row">
+                                <div class="cart_table-total_row-inner">
+                                    <ul class="cart_table-total_row-list lis-n">
+                                        <div class="cart_table-total_row-item">
+                                            <div class="title">合計</div>
+                                            <div class="txt">NT$ 2,750</div>
+                                        </div>
+                                        <div class="cart_table-total_row-item">
+                                            <div class="title">運費</div>
+                                            <div class="txt">NT$ 0</div>
+                                        </div>
+                                    </ul>
+                                    <div class="cart_table-total_row-total">
+                                        <div class="title">總金額</div>
+                                        <div class="txt txt-danger">NT$ 2,750</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -104,88 +101,99 @@
                         <div class="shopping_base-heading">
                             <h3 class="title">訂購資訊</h3>
                         </div>
-                        <div class="shopping_base-main">
-                            <form action="" class="{{PROJECT_NAME}}_frm cart_frm" method="POST">
-                                <div class="form-group">
-                                    {% set fieldSet = {
-                                    field_class: PROJECT_NAME + "_field-v",
-                                    name: "shipping_name",
-                                    isRequired: 1,
-                                    label: "收件人",
-                                    placeholder: "請輸入收件人名稱",
-                                    value: "收件人名稱"}%}
-                                    {{ field.input(PROJECT_NAME, fieldSet) }}
-                                    {% set fieldSet = {
-                                    field_class: PROJECT_NAME + "_field-v",
-                                    name: "shipping_phone",
-                                    isRequired: 1,
-                                    label: "收件人電話",
-                                    placeholder: "請輸入收件人電話",
-                                    value: "02-5575-1900"}%}
-                                    {{ field.input(PROJECT_NAME, fieldSet) }}
-                                </div>
-                                <div class="form-group">
-                                    {% set fieldSet = {
-                                    field_class: PROJECT_NAME + "_field-v",
-                                    name: "shipping_name",
-                                    isRequired: 1,
-                                    label: "收件人地址",
-                                    placeholder: "請輸入收件人地址",
-                                    value: "新北市板橋區新府路66號2樓"}%}
-                                    {{ field.input(PROJECT_NAME, fieldSet) }}
-                                </div>
-                                <div class="form-group">
-                                    <div class="{{PROJECT_NAME}}_rcx-wrap {{PROJECT_NAME}}_rcx-wrap-v required">
-                                        <div class="{{PROJECT_NAME}}_rcx-wrap-label">發票類型</div>
-                                        <div class="{{PROJECT_NAME}}_rcx-wrap-field">
-                                            {% set fieldSet = {
-                                                id: "invoice_type_1",
-                                                nameArr: "invoice_type[]",
-                                                text: "二聯式發票"}%}
-                                            {{ field.rcx(PROJECT_NAME, fieldSet) }}
-                                            {% set fieldSet = {
-                                                id: "invoice_type_2",
-                                                nameArr: "invoice_type[]",
-                                                text: "三聯式發票"}%}
-                                            {{ field.rcx(PROJECT_NAME, fieldSet) }}
+                        <div class="shopping_base-wrapper">
+                            <div class="shopping_base-main">
+                                <form action="" class="{{PROJECT_NAME}}_frm cart_frm" method="POST">
+                                    <div class="form-group">
+                                        {% set fieldSet = {
+                                        field_class: PROJECT_NAME + "_field-v",
+                                        name: "shipping_name",
+                                        isRequired: 1,
+                                        label: "收件人",
+                                        placeholder: "請輸入收件人名稱",
+                                        value: "收件人名稱"}%}
+                                        {{ field.input(PROJECT_NAME, fieldSet) }}
+                                        {% set fieldSet = {
+                                        field_class: PROJECT_NAME + "_field-v",
+                                        name: "shipping_phone",
+                                        isRequired: 1,
+                                        label: "收件人電話",
+                                        placeholder: "請輸入收件人電話",
+                                        value: "02-55751900"}%}
+                                        {{ field.input(PROJECT_NAME, fieldSet) }}
+                                    </div>
+                                    <div class="form-group">
+                                        {% set fieldSet = {
+                                        field_class: PROJECT_NAME + "_field-v",
+                                        name: "shipping_addr",
+                                        isRequired: 1,
+                                        label: "收件人地址",
+                                        placeholder: "請輸入收件人地址",
+                                        value: "新北市板橋區新府路66號2樓"}%}
+                                        {{ field.input(PROJECT_NAME, fieldSet) }}
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="{{PROJECT_NAME}}_rcx-wrap {{PROJECT_NAME}}_rcx-wrap-v required">
+                                            <div class="{{PROJECT_NAME}}_rcx-wrap-label">發票類型</div>
+                                            <div class="{{PROJECT_NAME}}_rcx-wrap-field">
+                                                {% set fieldSet = {
+                                                    id: "invoice_type_1",
+                                                    nameArr: "invoice_type[]",
+                                                    text: "二聯式發票"}%}
+                                                {{ field.rcx(PROJECT_NAME, fieldSet) }}
+                                                {% set fieldSet = {
+                                                    id: "invoice_type_2",
+                                                    nameArr: "invoice_type[]",
+                                                    text: "三聯式發票"}%}
+                                                {{ field.rcx(PROJECT_NAME, fieldSet) }}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    {% set fieldSet = {
-                                    field_class: PROJECT_NAME + "_field-v",
-                                    name: "shipping_invoice_title",
-                                    isRequired: 1,
-                                    label: "發票抬頭",
-                                    placeholder: "請輸入發票抬頭",
-                                    value: "彭氏國際企業有限公司"}%}
-                                    {{ field.input(PROJECT_NAME, fieldSet) }}
-                                    {% set fieldSet = {
-                                    field_class: PROJECT_NAME + "_field-v",
-                                    name: "shipping_invoice_taxid",
-                                    isRequired: 1,
-                                    label: "發票統編",
-                                    placeholder: "請輸入發票統編",
-                                    value: "69618541"}%}
-                                    {{ field.input(PROJECT_NAME, fieldSet) }}
-                                </div>
-                                <div class="form-group">
-                                    {% set fieldSet = {
-                                    field_class: PROJECT_NAME + "_field-v",
-                                    name: "shipping_invoice_addr",
-                                    isRequired: 1,
-                                    label: "發票寄送地址",
-                                    placeholder: "請輸入發票寄送地址",
-                                    value: "新北市板橋區新府路66號2樓"}%}
-                                    {{ field.input(PROJECT_NAME, fieldSet) }}
-                                </div>
-                                <div class="form-btns">
-                                    <button type="submit" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
-                                        確認結帳
-                                        <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
-                                    </button>
-                                </div>
-                            </form>
+                                    <div class="form-group">
+                                        {% set fieldSet = {
+                                        field_class: PROJECT_NAME + "_field-v",
+                                        name: "shipping_invoice_title",
+                                        isRequired: 1,
+                                        label: "發票抬頭",
+                                        placeholder: "請輸入發票抬頭",
+                                        value: "彭氏國際企業有限公司"}%}
+                                        {{ field.input(PROJECT_NAME, fieldSet) }}
+                                        {% set fieldSet = {
+                                        field_class: PROJECT_NAME + "_field-v",
+                                        name: "shipping_invoice_taxid",
+                                        isRequired: 1,
+                                        label: "發票統編",
+                                        placeholder: "請輸入發票統編",
+                                        value: "69618541"}%}
+                                        {{ field.input(PROJECT_NAME, fieldSet) }}
+                                    </div>
+                                    <div class="form-group">
+                                        {% set fieldSet = {
+                                        field_class: PROJECT_NAME + "_field-v",
+                                        name: "shipping_invoice_addr",
+                                        isRequired: 1,
+                                        label: "發票寄送地址",
+                                        placeholder: "請輸入發票寄送地址",
+                                        value: "新北市板橋區新府路66號2樓"}%}
+                                        {{ field.input(PROJECT_NAME, fieldSet) }}
+                                    </div>
+                                    <div class="form-group">
+                                        {% set fieldSet = {
+                                        field_class: PROJECT_NAME + "_field-v recaptcha_field",
+                                        name: "recaptcha",
+                                        isRequired: 1,
+                                        label: "驗證碼",
+                                        placeholder: "請輸入驗證碼"}%}
+                                        {{ field.recaptcha(PROJECT_NAME, fieldSet) }}
+                                    </div>
+                                    <div class="form-btns">
+                                        <button type="submit" class="{{PROJECT_NAME}}_btn {{PROJECT_NAME}}_btn-Pri">
+                                            確認結帳
+                                            <svg class="svgicon" data-src="{{IMG_PATH}}icons/icon-more-arrow-2.svg"></svg>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

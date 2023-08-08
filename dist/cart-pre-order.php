@@ -55,21 +55,21 @@
                             </li>
                         </ul>
                         <div class="account-container">
+                            <div class="shopping_list-heading">
+                                <h3 class="title">訂購商品列表</h3>
+                            </div>
                             <div class="shopping_list-wrapper">
-                                <div class="shopping_list-heading">
-                                    <h3 class="title">訂購商品列表</h3>
-                                </div>
-                                <table class="shopping_list-table cart_table">
-                                    <tr class="table_heading">
-                                        <th class="table_cell cart_table-name" data-ref="品名">品名</th>
-                                        <th class="table_cell cart_table-price" data-ref="單價">單價</th>
-                                        <th class="table_cell cart_table-quantity" data-ref="數量">數量</th>
-                                        <th class="table_cell cart_table-subtotal" data-ref="小記">小記</th>
-                                        <th class="table_cell cart_table-action" data-ref="操作">&nbsp;</th>
-                                    </tr>
+                                <div class="shopping_list-table cart_table">
+                                    <div class="table_heading">
+                                        <div class="table_cell cart_table-name" data-ref="品名">品名</div>
+                                        <div class="table_cell cart_table-price" data-ref="單價">單價</div>
+                                        <div class="table_cell cart_table-quantity" data-ref="數量">數量</div>
+                                        <div class="table_cell cart_table-subtotal" data-ref="小記">小記</div>
+                                        <div class="table_cell cart_table-action" data-ref="操作">&nbsp;</div>
+                                    </div>
                                     
-                                        <tr class="table_row">
-                                            <td class="table_cell cart_table-name" data-ref="品名">
+                                        <div class="table_row">
+                                            <div class="table_cell cart_table-name" data-ref="品名">
                                                 <div class="cart_pdt">
                                                     <div class="pdt_img">
                                                         <div class="img_div">
@@ -80,9 +80,9 @@
                                                     桃園青埔｜Xpark 都會型水生公園門票
                                                 </div>
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-price" data-ref="單價">$550</td>
-                                            <td class="table_cell cart_table-quantity" data-ref="數量">
+                                            </div>
+                                            <div class="table_cell cart_table-price" data-ref="單價">$550</div>
+                                            <div class="table_cell cart_table-quantity" data-ref="數量">
                                                 <div class="cart_quantity">
                                                     
                                                     
@@ -101,17 +101,17 @@
     </module-field>
 
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-subtotal" data-ref="小記">$550</td>
-                                            <td class="table_cell cart_table-action" data-ref="操作">
+                                            </div>
+                                            <div class="table_cell cart_table-subtotal" data-ref="小記">$550</div>
+                                            <div class="table_cell cart_table-action" data-ref="操作">
                                                 <button type="button" class="del_btn">
                                                     <svg class="svgicon" data-src="./assets/images/icons/icon-del.svg"></svg>
                                                 </button>
-                                            </td>
-                                        </tr>
+                                            </div>
+                                        </div>
                                     
-                                        <tr class="table_row">
-                                            <td class="table_cell cart_table-name" data-ref="品名">
+                                        <div class="table_row">
+                                            <div class="table_cell cart_table-name" data-ref="品名">
                                                 <div class="cart_pdt">
                                                     <div class="pdt_img">
                                                         <div class="img_div">
@@ -122,9 +122,9 @@
                                                     桃園青埔｜Xpark 都會型水生公園門票
                                                 </div>
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-price" data-ref="單價">$550</td>
-                                            <td class="table_cell cart_table-quantity" data-ref="數量">
+                                            </div>
+                                            <div class="table_cell cart_table-price" data-ref="單價">$550</div>
+                                            <div class="table_cell cart_table-quantity" data-ref="數量">
                                                 <div class="cart_quantity">
                                                     
                                                     
@@ -143,17 +143,17 @@
     </module-field>
 
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-subtotal" data-ref="小記">$550</td>
-                                            <td class="table_cell cart_table-action" data-ref="操作">
+                                            </div>
+                                            <div class="table_cell cart_table-subtotal" data-ref="小記">$550</div>
+                                            <div class="table_cell cart_table-action" data-ref="操作">
                                                 <button type="button" class="del_btn">
                                                     <svg class="svgicon" data-src="./assets/images/icons/icon-del.svg"></svg>
                                                 </button>
-                                            </td>
-                                        </tr>
+                                            </div>
+                                        </div>
                                     
-                                        <tr class="table_row">
-                                            <td class="table_cell cart_table-name" data-ref="品名">
+                                        <div class="table_row">
+                                            <div class="table_cell cart_table-name" data-ref="品名">
                                                 <div class="cart_pdt">
                                                     <div class="pdt_img">
                                                         <div class="img_div">
@@ -164,9 +164,9 @@
                                                     桃園青埔｜Xpark 都會型水生公園門票
                                                 </div>
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-price" data-ref="單價">$550</td>
-                                            <td class="table_cell cart_table-quantity" data-ref="數量">
+                                            </div>
+                                            <div class="table_cell cart_table-price" data-ref="單價">$550</div>
+                                            <div class="table_cell cart_table-quantity" data-ref="數量">
                                                 <div class="cart_quantity">
                                                     
                                                     
@@ -185,17 +185,17 @@
     </module-field>
 
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-subtotal" data-ref="小記">$550</td>
-                                            <td class="table_cell cart_table-action" data-ref="操作">
+                                            </div>
+                                            <div class="table_cell cart_table-subtotal" data-ref="小記">$550</div>
+                                            <div class="table_cell cart_table-action" data-ref="操作">
                                                 <button type="button" class="del_btn">
                                                     <svg class="svgicon" data-src="./assets/images/icons/icon-del.svg"></svg>
                                                 </button>
-                                            </td>
-                                        </tr>
+                                            </div>
+                                        </div>
                                     
-                                        <tr class="table_row">
-                                            <td class="table_cell cart_table-name" data-ref="品名">
+                                        <div class="table_row">
+                                            <div class="table_cell cart_table-name" data-ref="品名">
                                                 <div class="cart_pdt">
                                                     <div class="pdt_img">
                                                         <div class="img_div">
@@ -206,9 +206,9 @@
                                                     桃園青埔｜Xpark 都會型水生公園門票
                                                 </div>
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-price" data-ref="單價">$550</td>
-                                            <td class="table_cell cart_table-quantity" data-ref="數量">
+                                            </div>
+                                            <div class="table_cell cart_table-price" data-ref="單價">$550</div>
+                                            <div class="table_cell cart_table-quantity" data-ref="數量">
                                                 <div class="cart_quantity">
                                                     
                                                     
@@ -227,17 +227,17 @@
     </module-field>
 
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-subtotal" data-ref="小記">$550</td>
-                                            <td class="table_cell cart_table-action" data-ref="操作">
+                                            </div>
+                                            <div class="table_cell cart_table-subtotal" data-ref="小記">$550</div>
+                                            <div class="table_cell cart_table-action" data-ref="操作">
                                                 <button type="button" class="del_btn">
                                                     <svg class="svgicon" data-src="./assets/images/icons/icon-del.svg"></svg>
                                                 </button>
-                                            </td>
-                                        </tr>
+                                            </div>
+                                        </div>
                                     
-                                        <tr class="table_row">
-                                            <td class="table_cell cart_table-name" data-ref="品名">
+                                        <div class="table_row">
+                                            <div class="table_cell cart_table-name" data-ref="品名">
                                                 <div class="cart_pdt">
                                                     <div class="pdt_img">
                                                         <div class="img_div">
@@ -248,9 +248,9 @@
                                                     桃園青埔｜Xpark 都會型水生公園門票
                                                 </div>
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-price" data-ref="單價">$550</td>
-                                            <td class="table_cell cart_table-quantity" data-ref="數量">
+                                            </div>
+                                            <div class="table_cell cart_table-price" data-ref="單價">$550</div>
+                                            <div class="table_cell cart_table-quantity" data-ref="數量">
                                                 <div class="cart_quantity">
                                                     
                                                     
@@ -269,37 +269,34 @@
     </module-field>
 
                                                 </div>
-                                            </td>
-                                            <td class="table_cell cart_table-subtotal" data-ref="小記">$550</td>
-                                            <td class="table_cell cart_table-action" data-ref="操作">
+                                            </div>
+                                            <div class="table_cell cart_table-subtotal" data-ref="小記">$550</div>
+                                            <div class="table_cell cart_table-action" data-ref="操作">
                                                 <button type="button" class="del_btn">
                                                     <svg class="svgicon" data-src="./assets/images/icons/icon-del.svg"></svg>
                                                 </button>
-                                            </td>
-                                        </tr>
-                                    
-                                    <tr class="table_row cart_table-total_row">
-                                        <td class="table_cell"></td>
-                                        <td class="table_cell" colspan="4">
-                                            <div class="cart_table-total_row-inner">
-                                                <ul class="cart_table-total_row-list lis-n">
-                                                    <div class="cart_table-total_row-item">
-                                                        <div class="title">合計</div>
-                                                        <div class="txt">NT$ 2,750</div>
-                                                    </div>
-                                                    <div class="cart_table-total_row-item">
-                                                        <div class="title">運費</div>
-                                                        <div class="txt">NT$ 0</div>
-                                                    </div>
-                                                </ul>
-                                                <div class="cart_table-total_row-total">
-                                                    <div class="title">總金額</div>
-                                                    <div class="txt txt-danger">NT$ 2,750</div>
-                                                </div>
                                             </div>
-                                        </td>
-                                    </tr>
-                                </table>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="cart_table-total_row">
+                                <div class="cart_table-total_row-inner">
+                                    <ul class="cart_table-total_row-list lis-n">
+                                        <div class="cart_table-total_row-item">
+                                            <div class="title">合計</div>
+                                            <div class="txt">NT$ 2,750</div>
+                                        </div>
+                                        <div class="cart_table-total_row-item">
+                                            <div class="title">運費</div>
+                                            <div class="txt">NT$ 0</div>
+                                        </div>
+                                    </ul>
+                                    <div class="cart_table-total_row-total">
+                                        <div class="title">總金額</div>
+                                        <div class="txt txt-danger">NT$ 2,750</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -310,11 +307,12 @@
                         <div class="shopping_base-heading">
                             <h3 class="title">訂購資訊</h3>
                         </div>
-                        <div class="shopping_base-main">
-                            <form action="" class="justplayTicket_frm cart_frm" method="POST">
-                                <div class="form-group">
-                                    
-                                    
+                        <div class="shopping_base-wrapper">
+                            <div class="shopping_base-main">
+                                <form action="" class="justplayTicket_frm cart_frm" method="POST">
+                                    <div class="form-group">
+                                        
+                                        
     
     <module-field id="" class="justplayTicket_field justplayTicket_field-v required">
         <label for="shipping_name" class="justplayTicket_field-label">收件人</label>
@@ -330,8 +328,8 @@
         </div>
     </module-field>
 
-                                    
-                                    
+                                        
+                                        
     
     <module-field id="" class="justplayTicket_field justplayTicket_field-v required">
         <label for="shipping_phone" class="justplayTicket_field-label">收件人電話</label>
@@ -342,23 +340,23 @@
                 v-model="shipping_phone"
                 class="form-control"
                 placeholder="請輸入收件人電話"
-                value="02-5575-1900"
+                value="02-55751900"
                 >
         </div>
     </module-field>
 
-                                </div>
-                                <div class="form-group">
-                                    
-                                    
+                                    </div>
+                                    <div class="form-group">
+                                        
+                                        
     
     <module-field id="" class="justplayTicket_field justplayTicket_field-v required">
-        <label for="shipping_name" class="justplayTicket_field-label">收件人地址</label>
+        <label for="shipping_addr" class="justplayTicket_field-label">收件人地址</label>
         <div class="justplayTicket_field-ctrler">
             <input type="text"
-                id="shipping_name"
-                name="shipping_name"
-                v-model="shipping_name"
+                id="shipping_addr"
+                name="shipping_addr"
+                v-model="shipping_addr"
                 class="form-control"
                 placeholder="請輸入收件人地址"
                 value="新北市板橋區新府路66號2樓"
@@ -366,13 +364,13 @@
         </div>
     </module-field>
 
-                                </div>
-                                <div class="form-group">
-                                    <div class="justplayTicket_rcx-wrap justplayTicket_rcx-wrap-v required">
-                                        <div class="justplayTicket_rcx-wrap-label">發票類型</div>
-                                        <div class="justplayTicket_rcx-wrap-field">
-                                            
-                                            
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="justplayTicket_rcx-wrap justplayTicket_rcx-wrap-v required">
+                                            <div class="justplayTicket_rcx-wrap-label">發票類型</div>
+                                            <div class="justplayTicket_rcx-wrap-field">
+                                                
+                                                
 
     <div class="justplayTicket_rcx">
         <label for="invoice_type_1" class="justplayTicket_rcx-label">
@@ -384,8 +382,8 @@
         </label>
     </div>
 
-                                            
-                                            
+                                                
+                                                
 
     <div class="justplayTicket_rcx">
         <label for="invoice_type_2" class="justplayTicket_rcx-label">
@@ -397,12 +395,12 @@
         </label>
     </div>
 
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    
-                                    
+                                    <div class="form-group">
+                                        
+                                        
     
     <module-field id="" class="justplayTicket_field justplayTicket_field-v required">
         <label for="shipping_invoice_title" class="justplayTicket_field-label">發票抬頭</label>
@@ -418,8 +416,8 @@
         </div>
     </module-field>
 
-                                    
-                                    
+                                        
+                                        
     
     <module-field id="" class="justplayTicket_field justplayTicket_field-v required">
         <label for="shipping_invoice_taxid" class="justplayTicket_field-label">發票統編</label>
@@ -435,10 +433,10 @@
         </div>
     </module-field>
 
-                                </div>
-                                <div class="form-group">
-                                    
-                                    
+                                    </div>
+                                    <div class="form-group">
+                                        
+                                        
     
     <module-field id="" class="justplayTicket_field justplayTicket_field-v required">
         <label for="shipping_invoice_addr" class="justplayTicket_field-label">發票寄送地址</label>
@@ -454,14 +452,35 @@
         </div>
     </module-field>
 
-                                </div>
-                                <div class="form-btns">
-                                    <button type="submit" class="justplayTicket_btn justplayTicket_btn-Pri">
-                                        確認結帳
-                                        <svg class="svgicon" data-src="./assets/images/icons/icon-more-arrow-2.svg"></svg>
-                                    </button>
-                                </div>
-                            </form>
+                                    </div>
+                                    <div class="form-group">
+                                        
+                                        
+    
+    <module-field id="" class="justplayTicket_field justplayTicket_field-v recaptcha_field required">
+        <label for="recaptcha" class="justplayTicket_field-label">驗證碼</label>
+        <div class="justplayTicket_field-ctrler">
+            <input type="text"
+                id="recaptcha"
+                name="recaptcha"
+                v-model="recaptcha"
+                class="form-control"
+                placeholder="請輸入驗證碼"
+                value=""
+                >
+            <img src="" alt="">
+        </div>
+    </module-field>
+
+                                    </div>
+                                    <div class="form-btns">
+                                        <button type="submit" class="justplayTicket_btn justplayTicket_btn-Pri">
+                                            確認結帳
+                                            <svg class="svgicon" data-src="./assets/images/icons/icon-more-arrow-2.svg"></svg>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
