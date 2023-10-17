@@ -18,7 +18,8 @@
 
 	.js-scrolling & {
 		// @include linear-gradient(to bottom, color("Pri") 50%, rgba(#F6F6F6, 0) 100%);
-		background-color: #fff;
+		background-color: rgba(#fff, 0.5);
+		backdrop-filter: blur(10px);
 		box-shadow: 0 10px 30px rgba(darken(color("Pri"), 30), 0.1);
 	}
 
